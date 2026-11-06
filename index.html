@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="en" class="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rewrite the Rules — so that cutting emissions pays</title>
+<meta name="author" content="Tatsuya Mori (@ttmori)">
+<meta name="description" content="気候危機が止まらないのは、減らすと損をするルールのせい。減らすほど得をするように経済と政治のルールを書き換える提案「限界の内側で、舵を取る」（Planetary OS・Youth GCC・Global Citizen Will Platform）を1ページで。Why the climate crisis is stuck, and a proposal to rewrite the rules so that reducing pays — on one page.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rewrite the Rules — ルールを書き換える">
+<meta property="og:description" content="Effort hasn’t bent the curve because the rules make reducing a losing move. A one-way cap, 90% of revenue back to citizens, a share from past winners, and a club worth joining: a proposal to make cutting pay.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:site_name" content="Rewrite the Rules">
+<meta property="og:url" content="https://tamorist.github.io/rewrite/">
+<meta property="og:image" content="https://tamorist.github.io/rewrite/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Reducing is a losing move. So rewrite the rules. / Rewrite the Rules">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@ttmori">
+<link rel="canonical" href="https://tamorist.github.io/rewrite/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%231f6f78'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23f6f2ea' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%23f6f2ea'/%3E%3Cpath d='M16 3.5v25M5.2 9.75l21.6 12.5M5.2 22.25l21.6-12.5' stroke='%23f6f2ea' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f2ea; --bg2: #fffdf8; --bg3: #ece6da; --ink: #1d1f1c; --muted: #6b6a63; --faint: #d9d2c4;
+    --red: #b8402f; --amber: #c98a1e; --blue: #2f5d8a; --green: #2f6b4f; --vio: #5a4fa0; --teal: #1f6f78; --teal2: #8fd3cf; --dark: #141614;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); line-height: 1.8; font-size: 16px;
+    font-family: Inter, "Noto Sans JP", -apple-system, "Hiragino Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+  html.ja body { font-family: "Noto Sans JP", -apple-system, "Hiragino Sans", sans-serif; }
+  html.ja .en, html.en .ja { display: none !important; }
+  .num { font-family: Inter, -apple-system, sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+  .serif { font-family: "Noto Serif JP", Georgia, serif; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  .narrow { max-width: 700px; }
+  a { color: var(--blue); }
+  section { padding: 88px 0; scroll-margin-top: 52px; }
+  .eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; font-weight: 700; }
+  .chapter { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; font-size: 18px; font-weight: 900; color: color-mix(in srgb, var(--c) 78%, #000); letter-spacing: .04em; }
+  .chapter .cn { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--c); color: #fff; font-size: 16px; letter-spacing: 0; }
+  .chapter::after { content: ""; flex: 1; max-width: 120px; height: 2px; background: var(--c); opacity: .35; margin-left: 4px; }
+  h2 { font-size: clamp(26px, 4.4vw, 40px); line-height: 1.35; margin: 0 0 18px; font-weight: 900; }
+  h3 { font-size: 18px; margin: 0 0 8px; line-height: 1.5; }
+  .lead { font-size: clamp(16px, 2.2vw, 18px); color: #3c3e39; margin: 0 0 12px; }
+  .small { font-size: 13px; color: var(--muted); }
+  .est { display: inline-block; font-size: 11px; font-weight: 700; color: var(--amber); border: 1px solid currentColor; border-radius: 4px; padding: 0 5px; margin-left: 4px; vertical-align: 2px; letter-spacing: .02em; }
+  .ill { display: inline-block; font-size: 11px; font-weight: 700; color: var(--teal); border: 1px solid currentColor; border-radius: 4px; padding: 0 5px; margin-left: 4px; vertical-align: 2px; letter-spacing: .02em; white-space: nowrap; }
+  .hero .ill { color: var(--teal2); }
+  .card { background: var(--bg2); border: 1px solid var(--faint); border-radius: 16px; padding: 22px; margin-top: 28px; }
+  details.more { margin-top: 14px; font-size: 14px; }
+  details.more summary { cursor: pointer; color: var(--blue); font-weight: 700; }
+  details.more[open] summary { margin-bottom: 8px; }
+  blockquote.pull { margin: 28px 0; padding: 0 0 0 18px; border-left: 3px solid var(--ink); font-size: clamp(17px, 2.4vw, 21px); font-weight: 700; line-height: 1.6; }
+
+  /* top bar */
+  .top { position: sticky; top: 0; z-index: 10; background: rgba(246,242,234,.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--faint); }
+  .top .wrap { display: flex; align-items: center; gap: 14px; height: 52px; font-size: 13px; }
+  .brand { font-weight: 900; text-decoration: none; color: var(--ink); white-space: nowrap; }
+  .nav { display: flex; gap: 14px; overflow-x: auto; scrollbar-width: none; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
+  .nav a:hover { color: var(--ink); }
+  .lang { margin-left: auto; display: flex; border: 1px solid var(--faint); border-radius: 8px; overflow: hidden; flex-shrink: 0; }
+  .lang button { font: inherit; font-size: 12px; background: transparent; color: var(--muted); border: 0; padding: 5px 10px; cursor: pointer; }
+  .lang button[aria-pressed="true"] { background: var(--ink); color: var(--bg); font-weight: 700; }
+  @media (max-width: 640px) { .nav { display: none; } }
+  /* ClimateWatchMan（トップページ）への導線 */
+  .hub { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; flex-shrink: 0; white-space: nowrap; text-decoration: none; font-weight: 700; font-size: 12.5px; color: #f3efe6; background: var(--dark); border-radius: 999px; padding: 6px 12px 6px 10px; }
+  .hub:hover { background: #000; }
+  .hub i { width: 9px; height: 9px; border-radius: 50%; background: conic-gradient(#c75c1a 0 20%, #d23c2f 0 40%, #2f6b4f 0 60%, #5a4fa0 0 80%, #1f6f78 0); }
+  .hub + .lang { margin-left: 0; }
+  @media (max-width: 400px) { .hub { font-size: 12px; padding: 6px 10px 6px 8px; } }
+
+  /* hero */
+  .hero { background: var(--dark); color: #efece4; padding: 96px 0 72px; }
+  .hero .q { font-size: clamp(30px, 6vw, 58px); line-height: 1.35; font-weight: 900; margin: 0 0 22px; }
+  .hero .q .hl { color: var(--teal2); }
+  .hero .q .ib { display: inline-block; }
+  .hero p { color: #bdbab1; max-width: 680px; font-size: clamp(15px, 2.2vw, 18px); }
+  .hero p b { color: #efece4; }
+  .counter { margin: 36px 0 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .counter > div { border: 1px solid #2c302b; border-radius: 16px; padding: 20px 22px; background: #1b1e1a; }
+  .counter .k { font-size: 13px; color: #9d9a91; }
+  .counter .v { font-size: clamp(24px, 3.2vw, 34px); font-weight: 900; line-height: 1.15; color: var(--teal2); margin: 8px 0 4px; }
+  .counter .s { font-size: 12.5px; color: #8d8a82; }
+  .counter .s b { color: #efece4; }
+  .hero .src { font-size: 12px; color: #807d75; margin-top: 10px; max-width: none; }
+  .scroll-cue { margin-top: 30px; display: inline-flex; gap: 8px; align-items: center; color: #efece4; text-decoration: none; font-weight: 700; border: 1px solid #3a3f39; border-radius: 999px; padding: 10px 18px; }
+  .scroll-cue:hover { background: #22261f; }
+
+  /* ちきゅうさんの解説 あり／なし（姉妹サイト共通） */
+  .gpick { background: #fff; color: #1d1f1c; border: 1px solid rgba(0,0,0,.12); border-radius: 14px; padding: 12px 14px; margin: 18px 0 6px; max-width: 680px; font-size: 13px; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+  .gpick .gp-q { margin: 0 0 8px; font-weight: 700; font-size: 14px; color: #1d1f1c !important; }
+  .gpick .gp-btns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .gpick .gp-l { color: #6b6e66; font-size: 12.5px; }
+  .gpick button { font: inherit; font-size: 13.5px; text-align: left; background: #f4f1ea; color: #1d1f1c; border: 1px solid rgba(0,0,0,.14); border-radius: 10px; padding: 8px 12px; cursor: pointer; line-height: 1.4; }
+  .gpick button small { display: block; font-size: 11.5px; color: #6b6e66; font-weight: 400; }
+  .gpick button[aria-pressed="true"] { background: #1d1f1c; color: #fff; border-color: #1d1f1c; font-weight: 700; }
+  .gpick button[aria-pressed="true"] small { color: rgba(255,255,255,.75); }
+  .gpick.first .gp-l { display: none; }
+  .gpick:not(.first) { display: inline-block; padding: 6px 10px; border-radius: 999px; }
+  .gpick:not(.first) .gp-q, .gpick:not(.first) button small { display: none; }
+  .gpick:not(.first) button { padding: 3px 11px; border-radius: 999px; font-size: 12.5px; }
+  .gpick[hidden] { display: none !important; }
+  html.noguide .guide, html.noguide .sw-guide { display: none !important; }
+  .guide { display: flex; align-items: flex-end; gap: 10px; margin: 18px 0 22px; max-width: 680px; }
+  .guide .gchar { flex: 0 0 64px; width: 64px; height: 64px; }
+  .guide .gchar svg { width: 100%; height: 100%; display: block; }
+  .guide .bubble { position: relative; margin: 0 0 14px; background: #fff; color: var(--ink); border: 1px solid var(--faint); border-radius: 16px 16px 16px 4px; padding: 10px 14px; font-size: 14.5px; line-height: 1.75; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+  .guide .bubble b { color: #2f6b4f; }
+  .guide .bubble .nm { display: block; font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 2px; }
+  .hero .guide { margin: 26px 0 8px; }
+  .hero .guide .gchar { flex-basis: 84px; width: 84px; height: 84px; }
+  .hero .guide .bubble { font-size: 15px; }
+
+  /* map */
+  .layers { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 30px; }
+  .layers a { display: block; text-decoration: none; color: var(--ink); background: var(--bg2); border: 1px solid var(--faint); border-radius: 16px; padding: 20px; border-top: 4px solid var(--c); transition: transform .15s; }
+  .layers a:hover { transform: translateY(-2px); }
+  .layers .ic { font-size: 26px; }
+  .layers b { display: block; font-size: 17px; margin: 6px 0; }
+  .layers p { margin: 0; font-size: 14px; color: var(--muted); }
+
+  /* 1 why stuck */
+  .dilemma { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+  .dilemma > div { background: var(--bg2); border: 1px solid var(--faint); border-radius: 14px; padding: 16px 18px; font-size: 14px; }
+  .dilemma b { display: block; font-size: 16px; margin-bottom: 4px; }
+  .dilemma .ic { font-size: 24px; }
+  @media (max-width: 720px) { .dilemma { grid-template-columns: 1fr; } }
+  .tl { list-style: none; padding: 0; margin: 18px 0 0; position: relative; }
+  .tl::before { content: ""; position: absolute; left: 70px; top: 6px; bottom: 6px; width: 2px; background: var(--faint); }
+  .tl li { display: grid; grid-template-columns: 52px 22px 1fr; gap: 0 8px; align-items: start; padding: 6px 0; font-size: 14.5px; }
+  .tl .y { font-weight: 900; text-align: right; }
+  .tl .d { width: 12px; height: 12px; border-radius: 50%; background: var(--red); margin: 7px 0 0 5px; position: relative; z-index: 1; box-shadow: 0 0 0 3px var(--bg2); }
+  .tl .d.g { background: var(--amber); }
+  .tl small { display: block; color: var(--muted); font-size: 12.5px; }
+  .walls { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
+  .walls > div { border-left: 4px solid var(--red); background: var(--bg2); border-radius: 0 12px 12px 0; padding: 14px 16px; font-size: 14.5px; }
+  .walls b { display: block; font-size: 16px; }
+  @media (max-width: 640px) { .walls { grid-template-columns: 1fr; } }
+
+  /* 2 OS */
+  .stack { display: grid; gap: 6px; max-width: 560px; margin: 24px 0 8px; font-size: 14px; }
+  .stack > div { border-radius: 10px; padding: 12px 16px; display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .stack .apps { background: var(--bg); border: 1px dashed var(--faint); }
+  .stack .os { background: var(--dark); color: #efece4; }
+  .stack .os small { color: var(--teal2); font-weight: 700; }
+  .stack .earth { background: #dcebe2; color: #1f4d39; }
+  .stack small { font-size: 12px; color: var(--muted); text-align: right; white-space: nowrap; }
+  .irow { display: grid; grid-template-columns: 130px 1fr; gap: 12px; align-items: center; padding: 6px 0; }
+  .irow .t { font-size: 14px; font-weight: 700; line-height: 1.35; }
+  .ibar { display: flex; height: 32px; border-radius: 8px; overflow: hidden; background: var(--bg3); }
+  .ibar i { display: flex; align-items: center; justify-content: center; font-style: normal; font-size: 12.5px; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; }
+  .ibar i.m { color: var(--ink); }
+  @media (max-width: 560px) { .irow { grid-template-columns: 1fr; gap: 2px; } }
+
+  /* 3 Planetary OS */
+  .mods { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+  .mods > div { background: var(--bg2); border: 1px solid var(--faint); border-radius: 16px; padding: 18px 20px; border-top: 4px solid var(--c); }
+  .mods .mn { font-size: 12px; font-weight: 700; letter-spacing: .1em; color: color-mix(in srgb, var(--c) 80%, #000); }
+  .mods h3 { font-size: 19px; margin: 2px 0 6px; }
+  .mods p { font-size: 14.5px; margin: 0 0 6px; }
+  .mods ul { margin: 6px 0 0; padding-left: 18px; font-size: 14px; }
+  .mods li { margin: 3px 0; }
+  @media (max-width: 720px) { .mods { grid-template-columns: 1fr; } }
+  .flow { display: grid; grid-template-columns: 1fr 36px 1fr 36px 1fr; gap: 10px 0; align-items: stretch; margin-top: 18px; font-size: 13.5px; }
+  .flow .b { background: var(--bg); border: 1px solid var(--faint); border-radius: 12px; padding: 10px 12px; line-height: 1.5; }
+  .flow .b b { display: block; font-size: 14.5px; }
+  .flow .b small { color: var(--muted); font-size: 12px; display: block; }
+  .flow .b.t { background: #e1f0ee; border-color: #a9d3cf; }
+  .flow .b.g { background: #e3efe6; border-color: #b4d3bd; }
+  .flow .b.v { background: #ebe8f6; border-color: #c6bfe6; }
+  .flow .ar { display: grid; place-items: center; color: var(--muted); font-weight: 900; font-size: 18px; }
+  .flow .stk { display: grid; gap: 8px; }
+  .flow .lab { grid-column: 1 / -1; font-size: 12px; font-weight: 700; letter-spacing: .08em; color: var(--muted); margin-top: 6px; }
+  @media (max-width: 720px) { .flow { grid-template-columns: 1fr; } .flow .ar { transform: rotate(90deg); height: 24px; } }
+  table.ba { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 16px; }
+  .ba th, .ba td { border-bottom: 1px solid var(--faint); padding: 10px 8px; text-align: left; vertical-align: top; }
+  .ba th { font-size: 12px; color: var(--muted); }
+  .ba td:first-child { color: var(--muted); }
+  .ba td.ar { color: var(--muted); width: 24px; padding: 10px 0; }
+  .ba td:last-child { font-weight: 700; }
+  .loop { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 14px 0 4px; font-size: 13.5px; }
+  .loop span.n { background: var(--bg2); border: 1px solid var(--faint); border-radius: 999px; padding: 5px 12px; font-weight: 700; }
+  .loop .a { color: var(--teal); font-weight: 900; }
+
+  /* dividend illustration */
+  .div .ctl { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; align-items: center; font-size: 14px; margin: 8px 0 14px; max-width: 520px; }
+  .div .ctl input { grid-column: 1 / -1; }
+  .div .ctl .o { font-weight: 900; }
+  input[type=range] { width: 100%; accent-color: var(--teal); height: 28px; }
+  .grp { display: grid; grid-template-columns: 150px 1fr 120px; gap: 4px 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--faint); font-size: 13.5px; }
+  .grp .t b { display: block; font-size: 15px; }
+  .grp .t small { color: var(--muted); font-size: 12px; }
+  .grp .bars { display: grid; gap: 4px; padding-right: 64px; }
+  .grp .br { position: relative; height: 16px; background: var(--bg3); border-radius: 4px; }
+  .grp .br i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; transition: width .3s; }
+  .grp .br span { position: absolute; top: 50%; transform: translateY(-50%); font-size: 11.5px; white-space: nowrap; color: var(--muted); }
+  .grp .net { text-align: right; font-weight: 900; font-size: 18px; line-height: 1.2; }
+  .grp .net small { display: block; font-size: 11.5px; font-weight: 500; color: var(--muted); }
+  .grp .net.p { color: var(--green); } .grp .net.m { color: var(--red); } .grp .net.z { color: var(--amber); }
+  @media (max-width: 600px) { .grp { grid-template-columns: 1fr 120px; } .grp .bars { grid-column: 1 / -1; grid-row: 2; } }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+  /* 4 club */
+  .club { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; align-items: end; height: 220px; margin: 18px 0 6px; padding: 0 4px; border-bottom: 2px solid var(--ink); }
+  .club > div { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; }
+  .club .bar { width: 100%; max-width: 120px; border-radius: 8px 8px 0 0; background: var(--teal); display: flex; align-items: flex-start; justify-content: center; color: #fff; font-weight: 900; font-size: 17px; padding-top: 6px; }
+  .club .bar.last { background: repeating-linear-gradient(135deg, var(--teal) 0 10px, #2a8792 10px 20px); }
+  .clubx { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center; font-size: 12.5px; color: var(--muted); padding: 0 4px; line-height: 1.5; margin-top: 6px; }
+  .clubx b { display: block; color: var(--ink); font-size: 13.5px; }
+  .why4 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+  .why4 > div { background: var(--bg2); border: 1px solid var(--faint); border-radius: 14px; padding: 16px 18px; font-size: 14px; }
+  #club .why4 > div { background: var(--bg); }
+  .why4 b { display: block; font-size: 16px; margin-bottom: 4px; }
+  @media (max-width: 640px) { .why4 { grid-template-columns: 1fr; } }
+
+  /* 5 Youth GCC */
+  .org { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 22px; }
+  .org > div { background: var(--bg2); border: 1px solid var(--faint); border-radius: 14px; padding: 14px 16px; font-size: 13.5px; border-top: 4px solid var(--c, var(--teal)); }
+  .org b { display: block; font-size: 15.5px; margin: 2px 0 4px; }
+  .org .ic { font-size: 22px; }
+  .roles { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; margin-top: 22px; border: 1px solid var(--faint); border-radius: 14px; overflow: hidden; font-size: 14px; }
+  .roles > div { padding: 14px 16px; background: var(--bg2); }
+  .roles > div + div { border-left: 1px solid var(--faint); }
+  .roles b { display: block; font-size: 15px; }
+  @media (max-width: 640px) { .roles { grid-template-columns: 1fr; } .roles > div + div { border-left: 0; border-top: 1px solid var(--faint); } }
+
+  /* 6 platform */
+  .ch4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 20px; }
+  .ch4 > div { background: var(--bg); border: 1px solid var(--faint); border-radius: 14px; padding: 14px; font-size: 13.5px; text-align: center; }
+  .ch4 .ic { font-size: 26px; }
+  .ch4 b { display: block; font-size: 15px; margin: 2px 0 4px; }
+  @media (max-width: 720px) { .ch4 { grid-template-columns: 1fr 1fr; } }
+  .ask { margin: 30px 0 10px; background: var(--dark); color: #efece4; border-radius: 18px; padding: 26px; text-align: center; }
+  .ask small { display: block; color: #9d9a91; font-size: 13px; }
+  .ask b { display: block; font-size: clamp(22px, 4vw, 32px); line-height: 1.4; margin-top: 6px; color: var(--teal2); }
+
+  /* 7 package */
+  .pkg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px; }
+  .pkg > div { background: var(--bg2); border: 1px solid var(--faint); border-radius: 16px; padding: 18px; border-top: 5px solid var(--c); }
+  .pkg .k { font-size: 12px; font-weight: 700; letter-spacing: .1em; color: color-mix(in srgb, var(--c) 80%, #000); }
+  .pkg b { display: block; font-size: 18px; line-height: 1.35; margin: 4px 0 6px; }
+  .pkg p { margin: 0 0 6px; font-size: 14px; }
+  .pkg .fail { font-size: 12.5px; color: var(--muted); border-top: 1px dashed var(--faint); padding-top: 8px; margin-top: 8px; }
+  @media (max-width: 720px) { .pkg { grid-template-columns: 1fr; } }
+  .cycle { counter-reset: c; list-style: none; padding: 0; margin: 20px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; }
+  .cycle li { counter-increment: c; background: var(--bg2); border: 1px solid var(--faint); border-radius: 12px; padding: 10px 12px 10px 44px; position: relative; font-size: 13.5px; line-height: 1.55; }
+  .cycle li::before { content: counter(c); position: absolute; left: 12px; top: 10px; width: 22px; height: 22px; border-radius: 50%; background: var(--teal); color: #fff; font-size: 12px; font-weight: 900; display: grid; place-items: center; }
+  .cycle li:last-child { border-style: dashed; }
+
+  /* faq */
+  .faq details { background: var(--bg); border: 1px solid var(--faint); border-radius: 12px; padding: 12px 16px; margin-top: 10px; }
+  .faq summary { cursor: pointer; font-weight: 700; font-size: 15.5px; }
+  .faq details[open] summary { margin-bottom: 6px; }
+  .faq details p { margin: 0; font-size: 14.5px; }
+
+  /* join */
+  .steps { counter-reset: s; list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 8px; max-width: 700px; }
+  .steps li { counter-increment: s; position: relative; padding: 10px 14px 10px 46px; background: var(--bg2); border: 1px solid var(--faint); border-radius: 12px; font-size: 14.5px; }
+  .steps li::before { content: counter(s); position: absolute; left: 14px; top: 11px; width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--teal); color: var(--teal); font-size: 12px; font-weight: 900; display: grid; place-items: center; }
+  .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .cta a, .cta button { font: inherit; font-size: 14.5px; font-weight: 800; text-decoration: none; border-radius: 999px; padding: 11px 20px; border: 1px solid var(--teal); cursor: pointer; }
+  .cta a.p { background: var(--teal); color: #fff; }
+  .cta a.s, .cta button { background: transparent; color: var(--teal); }
+  .reads { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+  .reads a { display: block; text-decoration: none; color: var(--ink); background: var(--bg2); border: 1px solid var(--faint); border-radius: 12px; padding: 12px 16px; font-size: 14px; }
+  .reads a:hover { border-color: var(--teal); }
+  .reads a b { display: block; font-size: 15px; }
+  .reads a span.d { color: var(--muted); font-size: 13px; }
+  .reads a small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--teal); }
+
+  .honest { background: var(--bg3); }
+  .honest ul { padding-left: 18px; }
+  .honest li { margin: 8px 0; }
+  .srcs ol { font-size: 13px; padding-left: 22px; }
+  .srcs li { margin: 6px 0; }
+  .srcs .use { color: var(--muted); display: block; font-size: 12px; }
+  .srcs.src-collapsed ol > li:nth-child(n+5) { display: none; }
+  .src-toggle { margin-top: 10px; font: inherit; font-size: 13px; font-weight: 700; color: inherit; background: transparent; border: 1px solid rgba(128,128,128,.5); border-radius: 999px; padding: 7px 16px; cursor: pointer; }
+  .src-toggle:hover { border-color: var(--teal); }
+
+  .hubband { padding: 40px 0 8px; }
+  .hubcard { display: block; text-decoration: none; color: #f3efe6; background: var(--dark); border-radius: 20px; padding: 26px 26px 22px; }
+  .hubcard:hover { box-shadow: 0 10px 30px -12px rgba(0,0,0,.45); }
+  .hubcard .k { font-size: 12px; letter-spacing: .2em; color: #a9a6a0; font-weight: 700; }
+  .hubcard b.h { display: block; font-size: clamp(20px, 3.6vw, 27px); line-height: 1.4; margin: 6px 0 4px; }
+  .hubcard .d { display: block; color: #c9c6bf; font-size: 14px; }
+  .hubcard ol { list-style: none; padding: 0; margin: 16px 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .hubcard li { border-top: 4px solid var(--c); background: rgba(255,255,255,.05); border-radius: 8px; padding: 8px 10px; font-size: 12.5px; line-height: 1.45; color: #c9c6bf; }
+  .hubcard li small { display: block; font-size: 11px; color: #8f8c86; }
+  .hubcard li.on { background: rgba(255,255,255,.14); color: #fff; font-weight: 700; }
+  .hubcard li.on small { color: #f3efe6; }
+  .hubcard .go { display: inline-block; font-weight: 800; font-size: 15px; background: #f3efe6; color: #141614; border-radius: 999px; padding: 9px 18px; }
+  @media (max-width: 760px) { .hubcard ol { grid-template-columns: 1fr 1fr; } }
+  .sister .card2 { display: flex; gap: 16px; align-items: center; text-decoration: none; color: var(--ink); background: var(--bg2); border: 1px solid var(--faint); border-radius: 16px; padding: 18px 20px; margin-top: 12px; }
+  .sister .card2:hover { border-color: var(--ink); }
+  .sister .card2 .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--c); flex-shrink: 0; }
+  .sister .card2 .t { flex: 1; }
+  .sister .card2 b { display: block; font-size: 17px; }
+  .sister .card2 .d { display: block; font-size: 13.5px; color: var(--muted); }
+  .sister .card2 .go { font-weight: 700; font-size: 13px; white-space: nowrap; }
+  footer { padding: 32px 0 48px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--faint); }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><span class="ja">ルールを書き換える</span><span class="en">Rewrite the Rules</span></a>
+    <nav class="nav">
+      <a href="#stuck"><span class="ja">なぜ止まらない</span><span class="en">Why stuck</span></a>
+      <a href="#os"><span class="ja">問題はOS</span><span class="en">The OS</span></a>
+      <a href="#planetary">Planetary OS</a>
+      <a href="#club"><span class="ja">クラブ</span><span class="en">The club</span></a>
+      <a href="#who"><span class="ja">担い手</span><span class="en">Who</span></a>
+      <a href="#how"><span class="ja">回路</span><span class="en">How</span></a>
+      <a href="#faq"><span class="ja">よくある疑問</span><span class="en">FAQ</span></a>
+      <a href="#join"><span class="ja">参加する</span><span class="en">Join</span></a>
+    </nav>
+    <a class="hub" href="https://tamorist.github.io/"><i aria-hidden="true"></i><span class="ja">すべてのサイト</span><span class="en">All sites</span></a>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en">EN</button><button data-lang="ja">日本語</button>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#807d75">Rewrite the Rules</p>
+    <h1 class="q serif">
+      <span class="ja"><span class="ib">減らすと、</span><span class="ib">損をする。</span><br><span class="hl"><span class="ib">だから、</span><span class="ib">ルールを書き換える。</span></span></span>
+      <span class="en">Reducing is a losing move.<br><span class="hl">So rewrite the rules.</span></span>
+    </h1>
+    <p>
+      <span class="ja">何十年もの研究、資金、市民運動、国際会議。それでも排出は減っていません。人々が無関心だったからではありません。<b>経済と政治のルールが、個人にも企業にも国にも「減らすと損をする」形になっている</b>からです。答えは、さらなる我慢でも、世界的な合意を待つことでもなく、<b>減らすほど得をするようにルールを書き換え、簡単には覆せない場所に置くこと</b>。このページは、その具体的な提案「限界の内側で、舵を取る」の概要を、1ページで紹介します。</span>
+      <span class="en">Decades of research, funding, activism and summits — and emissions still haven’t fallen. Not because people don’t care, but because <b>the rules of the economy and of politics make reducing a losing move</b> for individuals, firms and countries alike. The answer is neither more sacrifice nor waiting for a global agreement. It is to <b>rewrite the rules so that reducing pays, and put them where they are hard to undo</b>. This page introduces one concrete proposal for doing that — <i>Steering Within Limits</i> — on a single page.</span>
+    </p>
+<div class="gpick first" id="guidePick" role="group" aria-label="Guide">
+  <p class="gp-q"><span class="ja">はじめに、読み方を選べます</span><span class="en">How would you like to read?</span></p>
+  <div class="gp-btns"><span class="gp-l"><span class="ja">ちきゅうさんの解説</span><span class="en">Little Earth’s guide</span></span>
+    <button data-guide-set="on">🌍 <span class="ja">解説あり</span><span class="en">Guide on</span><small><span class="ja">ちきゅうさんと、やさしい言葉で読む</span><span class="en">Read along with Little Earth, in plain words</span></small></button>
+    <button data-guide-set="off"><span class="ja">解説なし</span><span class="en">Guide off</span><small><span class="ja">データと本文だけで読む</span><span class="en">Just the data and the text</span></small></button>
+  </div>
+</div>
+<div class="guide hero-g"><span class="gchar" data-mood="happy"></span><p class="bubble"><span class="nm"><span class="ja">ちきゅうさん</span><span class="en">Little Earth</span></span><span class="ja">ここは、ほかのサイトで見てきた問題の<b>「解き方」</b>の話だよ。だれかに我慢をお願いする話じゃなくて、<b>がんばった人が報われるルール</b>をどう作るか。わくわくしながら読んでみてね。</span><span class="en">This is where we talk about <b>a way out</b> of the problems on the other sites. It isn’t about asking anyone to sacrifice — it’s about building <b>rules where doing the right thing pays</b>. Enjoy!</span></p></div>
+    <div class="counter">
+      <div>
+        <div class="k"><span class="ja">競売の収入のうち、市民に直接返す割合</span><span class="en">Share of auction revenue paid straight back to citizens</span><span class="ill"><span class="ja">一例</span><span class="en">illustrative</span></span></div>
+        <div class="v num">90%</div>
+        <div class="s"><span class="ja">60%は全員に同額、40%は使う量が少ない人に多めに。残り10%は働く人と地域の「公正な移行」に。</span><span class="en">60% in equal shares, 40% weighted toward people who use less. The other 10% funds a just transition for workers and regions.</span></div>
+      </div>
+      <div>
+        <div class="k"><span class="ja">手取りがプラスになる人の割合</span><span class="en">People who come out ahead</span><span class="ill"><span class="ja">計算上の想定</span><span class="en">model estimate</span></span></div>
+        <div class="v num"><span class="ja">約7割</span><span class="en">≈70%</span></div>
+        <div class="s"><span class="ja">化石燃料の消費は所得とともに急に増えるから。<b>多数派保証ルール</b>で、少なくとも7割がプラスになるよう上乗せします。</span><span class="en">Because fossil use rises steeply with income. A <b>majority-benefit rule</b> tops up households just short of break-even so at least 70% gain.</span></div>
+      </div>
+      <div>
+        <div class="k"><span class="ja">化石燃料の上限が動ける向き</span><span class="en">Directions the fossil cap can move</span></div>
+        <div class="v num"><span class="ja">一方向だけ</span><span class="en">One way only</span></div>
+        <div class="s"><span class="ja">早く絞ることはできても、ゆるめることはできない。「来年に先送り」をなくすしくみです。</span><span class="en">It can tighten faster than planned, but never loosen — ending the option of “postpone it to next year”.</span></div>
+      </div>
+    </div>
+    <p class="src"><span class="ja">名前・割合・数値はすべて提案の「一例」で、本当の値は専門家の検証と市民の熟議で決めていくものです。</span><span class="en">All names, ratios and figures are illustrative: the real values are meant to be set through expert review and public deliberation.</span> <a href="#honest" style="color:#9d9a91"><span class="ja">数字の限界</span><span class="en">Limits of the numbers</span></a></p>
+    <a class="scroll-cue" href="#map"><span class="ja">全体像を見る ↓</span><span class="en">See the whole idea ↓</span></a>
+  </div>
+</header>
+
+<!-- MAP -->
+<section id="map" style="padding-bottom:40px">
+  <div class="wrap">
+    <p class="eyebrow"><span class="ja">このページの道すじ</span><span class="en">The argument in four steps</span></p>
+    <h2><span class="ja">問題は人ではなく、ルール。<br>だから、ルールと担い手と回路をつくる。</span><span class="en">The problem is the rules, not the people.<br>So build the rules, the carriers and the channel.</span></h2>
+    <p class="lead narrow"><span class="ja">姉妹サイトでは、気候危機の全体像、失われる命、食卓からできること、そして経済の根っこにある問題を見てきました。ここでは、その問題を<b>どう解くか</b>の提案を紹介します。提案は3つでひとつのパッケージです。</span><span class="en">The sister sites cover the big picture, the lives at stake, what we can change at the table, and the economics at the root. This one introduces a proposal for <b>how to solve it</b>: three proposals that work as one package.</span></p>
+    <div class="layers">
+      <a href="#stuck" style="--c:var(--red)"><span class="ic">🔒</span><b><span class="ja">① なぜ止まらないのか</span><span class="en">① Why it’s stuck</span></b><p><span class="ja">「自分だけ減らすと損」という構造。炭素価格は何度も撤回されてきた。</span><span class="en">Reducing alone means losing. Carbon prices keep getting repealed.</span></p></a>
+      <a href="#planetary" style="--c:var(--teal)"><span class="ic">⚙️</span><b><span class="ja">② 何を：Planetary OS</span><span class="en">② What: Planetary OS</span></b><p><span class="ja">一方向の上限、市民への還元、過去の受益者の負担、二重の鍵。</span><span class="en">A one-way cap, a citizen dividend, a share from past winners, a double key.</span></p></a>
+      <a href="#who" style="--c:var(--amber)"><span class="ic">🧑‍🤝‍🧑</span><b><span class="ja">③ 誰が：Youth GCC</span><span class="en">③ Who: Youth GCC</span></b><p><span class="ja">若者が運営し、くじ引きで選ばれた市民が熟議する、もう一つの政治の回路。</span><span class="en">A youth-led congress with a citizens’ assembly chosen by lot: a second circuit of politics.</span></p></a>
+      <a href="#how" style="--c:var(--vio)"><span class="ic">📡</span><b><span class="ja">④ どのように：Platform</span><span class="en">④ How: the Platform</span></b><p><span class="ja">ばらばらの運動をつなぎ、支持を見える形にして、決定に届ける。</span><span class="en">Federate existing movements, make support visible, connect it to decisions.</span></p></a>
+    </div>
+  </div>
+</section>
+
+<!-- 1 STUCK -->
+<section id="stuck">
+  <div class="wrap">
+    <p class="chapter" style="--c:var(--red)"><span class="cn">1</span><span class="ja">なぜ止まらないのか</span><span class="en">Why it’s stuck</span></p>
+    <h2><span class="ja">努力が足りないのではない。<br>勝てないゲームに注ぎ込まれてきた。</span><span class="en">Not a lack of effort.<br>Effort poured into a game it can’t win.</span></h2>
+    <div class="guide"><span class="gchar" data-mood="worry"></span><p class="bubble"><span class="ja">みんなで使う漁場を思い浮かべてね。少し多く獲れば自分の得、資源が減る損はみんなに薄く広がる。<b>一人ひとりは筋が通っているのに、海は空っぽ</b>になっちゃうの。</span><span class="en">Picture a shared fishing ground. Catch a bit more and you gain; the damage is spread thinly over everyone. <b>Each choice makes sense — and together they empty the sea.</b></span></p></div>
+    <p class="lead narrow"><span class="ja">この50年で、世界の人口は約2倍、化石燃料からの年間の CO₂ 排出は2倍以上になりました。これまでに出された化石燃料の CO₂ の約7割は、この50年に出たものです。その大半は、世界がすでに警告を受けたあとでした。原因は、この問題が<b>「集合行為の問題」</b>の構造を持っていることにあります（経済学でいう「共有地の悲劇」と「囚人のジレンマ」）。</span><span class="en">In fifty years the world’s population has doubled and annual fossil CO₂ emissions have more than doubled. About 70% of all fossil CO₂ ever emitted was released in those fifty years — most of it after the world had been warned. The cause is that the problem has the structure of a <b>collective-action problem</b> (what economists call the tragedy of the commons, and the prisoner’s dilemma).</span></p>
+    <div class="dilemma">
+      <div><span class="ic">🏭</span><b><span class="ja">企業</span><span class="en">A firm</span></b><span class="ja">競合が何もしないなか自社だけ削減に投資すれば、コストが上がり、市場を失う。</span><span class="en">Cutting emissions while competitors don’t raises its costs and loses it market share.</span></div>
+      <div><span class="ic">🏳️</span><b><span class="ja">国</span><span class="en">A country</span></b><span class="ja">一国だけ炭素に価格をつければ、産業と雇用が国外へ。排出はよそで出るだけ（カーボン・リーケージ）。</span><span class="en">Pricing carbon alone risks industry and jobs moving abroad — the emissions just reappear elsewhere (“carbon leakage”).</span></div>
+      <div><span class="ic">🏛️</span><b><span class="ja">政府</span><span class="en">A government</span></b><span class="ja">化石燃料を値上げすると、コストはすぐ今の家庭に。効果は何十年もかけて、世界中に薄く広がる。</span><span class="en">Raising fossil prices hits today’s households at once; the benefits are spread over decades and across the world.</span></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ja">くり返されてきた「撤回」</span><span class="en">A pattern of reversals</span></h3>
+      <ul class="tl">
+        <li><span class="y num">2005–</span><span class="d g"></span><span><span class="ja">EU 排出量取引制度：排出枠が余り、厳しい上限をかけられない時期が長く続いた</span><span class="en">EU Emissions Trading System: years with too many allowances to impose a strict cap</span></span></li>
+        <li><span class="y num">2012</span><span class="d g"></span><span><span class="ja">オーストラリア、炭素価格を導入</span><span class="en">Australia introduces a carbon price</span></span></li>
+        <li><span class="y num">2014</span><span class="d"></span><span><span class="ja">オーストラリア、2年で廃止</span><span class="en">Australia repeals it after two years</span></span></li>
+        <li><span class="y num">2018</span><span class="d"></span><span><span class="ja">フランス、抗議運動（黄色いベスト）を受けて燃料税の引き上げを見送り</span><span class="en">France drops a planned fuel-tax rise after the “yellow vest” protests</span></span></li>
+        <li><span class="y num">2025</span><span class="d"></span><span><span class="ja">カナダ、消費者向けの炭素課金を廃止</span><span class="en">Canada ends its consumer carbon charge</span><small><span class="ja">多くの家庭が還付を受けていたにもかかわらず</span><span class="en">even though most households were receiving rebates</span></small></span></li>
+      </ul>
+    </div>
+
+    <div class="walls">
+      <div><b><span class="ja">壁1：負担が「今」にだけかかる</span><span class="en">Wall 1: the burden falls only on the present</span></b><span class="ja">今の排出に価格をつけると、コストは今の家庭と働く人に。過去の排出で富を築いた人は、ほとんど負担しない。支持が失われ、政策は弱められる。</span><span class="en">Pricing today’s emissions puts the cost on today’s households and workers; those who built wealth on past emissions pay almost nothing. Support erodes and the policy is weakened.</span></div>
+      <div><b><span class="ja">壁2：自分だけ減らすと、損をする</span><span class="en">Wall 2: reducing alone means losing</span></b><span class="ja">ルールが同じままなら、一方的に減らすことには不利な点しかない。</span><span class="en">As long as the rules stay the same, unilateral reduction has only downsides.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 OS -->
+<section id="os" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="chapter" style="--c:#3c3e39"><span class="cn">2</span><span class="ja">問題は「OS」にある</span><span class="en">The problem is the operating system</span></p>
+    <h2><span class="ja">良いアプリを入れても、<br>OS の欠陥は直らない。</span><span class="en">Better apps can’t fix<br>a flawed operating system.</span></h2>
+    <p class="lead narrow"><span class="ja">人の「行動」と、行動を形づくる「ルール」を分けて考えてみます。私たちの文明は、2つの中心的なルールの上で動いています。<b>経済は拡大するように作られ</b>、<b>政治は国民国家を単位に、選挙の周期で動く</b>。めざましい進歩をもたらしたルールですが、物理的な限界のある世界、国境を越える問題、投票できない若者やまだ生まれていない人たちのためには、設計されていませんでした。</span><span class="en">Separate <i>behaviour</i> from the <i>rules that shape behaviour</i>. Our civilisation runs on two core rules: <b>the economy is built to expand</b>, and <b>politics is organised by nation-state, on electoral time scales</b>. They produced extraordinary progress — but were never designed for hard physical limits, problems that cross every border, or the interests of people who cannot vote: the young and the not-yet-born.</span></p>
+    <div class="stack" aria-label="Layers">
+      <div class="apps"><span><b><span class="ja">アプリ</span><span class="en">Apps</span></b> — <span class="ja">個人の努力、企業の目標、技術</span><span class="en">personal effort, corporate pledges, technology</span></span></div>
+      <div class="os"><span><b><span class="ja">OS（動作ルール）</span><span class="en">Operating system (the rules)</span></b> — <span class="ja">拡大する経済 ＋ 国ごとの政治</span><span class="en">an expanding economy + nation-state politics</span></span><small><span class="ja">← ここを書き換える</span><span class="en">← rewrite this</span></small></div>
+      <div class="earth"><span><b><span class="ja">地球</span><span class="en">The planet</span></b> — <span class="ja">動かせない物理的な限界</span><span class="en">fixed physical limits</span></span></div>
+    </div>
+
+    <h3 style="margin-top:40px"><span class="ja">足りないのではなく、めぐっていない</span><span class="en">Not a shortage, but a blockage</span></h3>
+    <p class="narrow" style="font-size:15px"><span class="ja">見落とされがちな点があります。人類全体では、富も生産する力も、すでに足りています。欠けているのは、それがめぐるしくみです。<b>富と排出は、同じところに集中しています。</b>だから、うまく設計すれば、全員に同じ負担を求めるのではなく、<b>排出を減らしながら、排出の多い人から少ない人へお金を動かせます</b>。</span><span class="en">Humanity as a whole already has enough wealth and productive capacity. What is missing is circulation. <b>Wealth and emissions are concentrated in the same hands.</b> So a well-designed system can <b>move money from high emitters to low emitters while cutting emissions</b>, instead of asking everyone to pay equally.</span></p>
+    <div class="card" style="max-width:760px;background:var(--bg)">
+      <div class="irow"><span class="t"><span class="ja">世界の富</span><span class="en">World wealth</span></span><div class="ibar"><i style="width:76%;background:var(--vio)"><span class="ja">上位10%：76%</span><span class="en">Top 10%: 76%</span></i><i class="m" style="width:22%;background:#c6bfe6">22%</i><i style="width:2%;background:#ebe8f6"></i></div></div>
+      <div class="irow"><span class="t"><span class="ja">世界の排出</span><span class="en">World emissions</span></span><div class="ibar"><i style="width:48%;background:var(--red)"><span class="ja">上位10%：48%</span><span class="en">Top 10%: 48%</span></i><i class="m" style="width:40%;background:#eab4a8">40%</i><i class="m" style="width:12%;background:#f6dcd5">12%</i></div></div>
+      <div class="legend"><span><span class="ja">左から：上位10%・中間40%・下位50%</span><span class="en">Left to right: top 10%, middle 40%, bottom 50%</span></span></div>
+      <p class="small" style="margin:8px 0 0"><span class="ja">出典：World Inequality Report 2022、Chancel（2022）。詳しくは姉妹サイト<a href="https://tamorist.github.io/enough/?lang=ja#fair">「足りる経済へ」</a>で。</span><span class="en">Sources: World Inequality Report 2022; Chancel (2022). More on the sister site <a href="https://tamorist.github.io/enough/#fair">Enough for All</a>.</span></p>
+    </div>
+    <blockquote class="pull"><span class="ja">本当の問いは「どうやってみんなに我慢させるか」ではない。<br>「低炭素の選択が、得をする選択にもなるように、どうルールを書き換えるか」だ。</span><span class="en">The real question isn’t “how do we get everyone to sacrifice?”<br>It’s “how do we rewrite the rules so the low-carbon choice is also the rewarding one?”</span></blockquote>
+  </div>
+</section>
+
+<!-- 3 PLANETARY OS -->
+<section id="planetary">
+  <div class="wrap">
+    <p class="chapter" style="--c:var(--teal)"><span class="cn">3</span><span class="ja">何を：Planetary OS（提案C）</span><span class="en">What: Planetary OS (Proposal C)</span></p>
+    <h2><span class="ja">減らすほど、得をする。<br>4つのモジュールで、ルールを組み直す。</span><span class="en">The less you use, the more you keep.<br>Four modules that rebuild the rules.</span></h2>
+    <div class="guide"><span class="gchar" data-mood="smile"></span><p class="bubble"><span class="ja">ポイントは、<b>上限から生まれたお金が、みんなに返ってくる</b>こと。だから、上限を守ることが、みんなの得になるんだ。</span><span class="en">The key: <b>the money raised by the cap comes back to everyone</b>. So protecting the cap is in everyone’s interest.</span></p></div>
+    <p class="lead narrow"><span class="ja">Planetary OS は、さきほどの2つの壁に向けて設計された、4つのモジュールからなるルールのセットです。目標は、温暖化を<b>2℃を十分に下回る</b>水準に抑えること（1.5℃を超えずに抑えるのは、今では非常に難しくなっています）。</span><span class="en">Planetary OS is a set of rules in four modules, each aimed at the two walls above. Its target is to keep warming <b>well below 2°C</b> (holding it to 1.5°C without overshoot is now very likely out of reach).</span></p>
+
+    <div class="mods">
+      <div style="--c:var(--teal)"><span class="mn"><span class="ja">モジュール1 · SAS</span><span class="en">MODULE 1 · SAS</span></span>
+        <h3><span class="ja">入口での、一方向の上限</span><span class="en">A one-way cap at the source</span></h3>
+        <p><span class="ja">何百万もの排出源ではなく、化石燃料が経済に入る<b>上流</b>（鉱山・油田・輸入港）で量に上限をかけ、排出枠を競売で売ります。価格は、製品に含まれる化石燃料の量に応じて経済全体に伝わります。</span><span class="en">Instead of regulating millions of emitters, cap fossil fuels <b>upstream</b> — at the mine, the well and the port — and auction the allowances. The price flows to every product in proportion to its fossil content.</span></p>
+        <ul class="ja"><li>総量は残りの炭素予算から導いたペースで毎年減る（一例：世界平均で年約8%、高所得国はもっと速く）</li><li><b>絞ることはできても、ゆるめることはできない</b></li></ul>
+        <ul class="en"><li>The total falls each year at a pace derived from the remaining carbon budget (e.g. ~8% a year globally, faster for high-income countries)</li><li><b>It can tighten faster, but never loosen</b></li></ul></div>
+      <div style="--c:var(--green)"><span class="mn"><span class="ja">モジュール2 · 市民への還元</span><span class="en">MODULE 2 · CITIZEN DIVIDEND</span></span>
+        <h3><span class="ja">収入を、市民に返す</span><span class="en">Return the revenue to citizens</span></h3>
+        <p><span class="ja">競売の収入を一般の税収にせず、一例では<b>90%</b>を市民に直接返します。</span><span class="en">The auction revenue is not general tax income. In the illustration, <b>90%</b> goes straight back to citizens.</span></p>
+        <ul class="ja"><li>60%：全員に同じ額</li><li>40%：エネルギーやモノの使用が少ない人に多めに（縮小に連動する還元）</li><li>10%：化石燃料に頼ってきた働く人と地域の「公正な移行」</li></ul>
+        <ul class="en"><li>60%: equal shares for every person</li><li>40%: more for people who use less energy and fewer materials (sufficiency-linked)</li><li>10%: a just transition for fossil-dependent workers and regions</li></ul></div>
+      <div style="--c:var(--vio)"><span class="mn"><span class="ja">モジュール3 · BEI と PTE</span><span class="en">MODULE 3 · BEI &amp; PTE</span></span>
+        <h3><span class="ja">過去に最も得をした人の負担</span><span class="en">A share from those who gained most</span></h3>
+        <p><span class="ja">大気中の CO₂ は何世代もかけて積み上がり、その利益は平等に分けられていません。非常に大きな資産と企業利益に<b>薄く広く</b>課し（BEI）、長期の基金 PTE に入れます。一例の試算で、世界全体で年約1兆ドル規模（0.8〜1.3兆ドル）。</span><span class="en">The CO₂ stock was built over generations, and the gains were not shared evenly. A <b>thin, broad levy</b> on very large wealth and corporate profits (BEI) goes into a long-term fund, the PTE — on the order of USD 1 trillion a year globally in one illustrative estimate (0.8–1.3 tn).</span></p>
+        <ul class="ja"><li>途上国のクリーンエネルギーの資金コストを下げる保証、生態系の回復</li><li>立ち上げ期は市民への還元に上乗せ</li></ul>
+        <ul class="en"><li>First-loss guarantees that cut the cost of clean energy in developing countries; ecosystem restoration</li><li>A top-up to the dividend in the launch phase</li></ul></div>
+      <div style="--c:var(--amber)"><span class="mn"><span class="ja">モジュール4 · 二重の鍵</span><span class="en">MODULE 4 · DOUBLE KEY</span></span>
+        <h3><span class="ja">後戻りを防ぐ</span><span class="en">A lock against backsliding</span></h3>
+        <p><span class="ja">ルールを変えるには、2つの鍵が同時に必要です。</span><span class="en">Changing the rules takes two keys at once:</span></p>
+        <ul class="ja"><li>🔑 科学的な根拠</li><li>🔑 くじ引きで選んだ市民会議の大多数（一例：4分の3）の承認</li><li>データは分散した独立機関どうしで照合し、数字をこっそり曲げられないように</li></ul>
+        <ul class="en"><li>🔑 a scientific justification</li><li>🔑 approval by a large majority (e.g. three-quarters) of a citizens’ assembly chosen by lot</li><li>Data cross-checked by independent institutions, so the numbers can’t quietly be bent</li></ul></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="ja">2つのお金の流れ</span><span class="en">The two money flows</span></h3>
+      <div class="flow">
+        <span class="lab"><span class="ja">① 化石燃料の上限から</span><span class="en">① From the fossil cap</span></span>
+        <div class="b t"><b><span class="ja">化石燃料が経済に入る所</span><span class="en">Where fossil fuels enter</span></b><small><span class="ja">鉱山・油田・輸入港</span><span class="en">mines, wells, ports</span></small></div>
+        <div class="ar">→</div>
+        <div class="b t"><b><span class="ja">排出枠の競売</span><span class="en">Allowance auction</span></b><small><span class="ja">上限は毎年減り、一方向にしか動かない</span><span class="en">the cap falls every year, one way only</span></small></div>
+        <div class="ar">→</div>
+        <div class="stk"><div class="b g"><b><span class="ja">市民への還元 90%</span><span class="en">Citizen Dividend 90%</span></b><small><span class="ja">同額60%＋縮小連動40%</span><span class="en">60% equal + 40% sufficiency-linked</span></small></div><div class="b"><b><span class="ja">公正な移行 10%</span><span class="en">Just Transition 10%</span></b></div></div>
+        <span class="lab"><span class="ja">② 過去の受益者から</span><span class="en">② From past beneficiaries</span></span>
+        <div class="b v"><b><span class="ja">非常に大きな資産・企業利益</span><span class="en">Very large wealth &amp; profits</span></b><small><span class="ja">BEI：薄く、広く</span><span class="en">BEI: a thin, broad levy</span></small></div>
+        <div class="ar">→</div>
+        <div class="b v"><b><span class="ja">PTE（長期の基金）</span><span class="en">PTE (long-term endowment)</span></b><small>Planetary Transition Endowment</small></div>
+        <div class="ar">→</div>
+        <div class="b"><b><span class="ja">移行への投資・保証・回復</span><span class="en">Investment, guarantees, restoration</span></b><small><span class="ja">＋ 還元への上乗せ（多数派保証）</span><span class="en">+ dividend top-up (majority-benefit rule)</span></small></div>
+      </div>
+    </div>
+
+    <!-- 還元の図解 -->
+    <div class="card div">
+      <h3><span class="ja">なぜ、多くの人が得をするのか</span><span class="en">Why most people come out ahead</span><span class="est"><span class="ja">私たちの概算・図解</span><span class="en">our illustration</span></span></h3>
+      <p style="font-size:14.5px;margin:0 0 8px"><span class="ja">化石燃料の消費は、所得とともに急に増えます。だから、炭素の値段を払う額は人によって大きく違うのに、還元はほぼ同じ額。<b>平均より使う量が少ない人は、払う額より受け取る額のほうが多く</b>なります。世界の3つのグループの1人あたり排出で、ざっくり見てみます。</span><span class="en">Fossil consumption rises steeply with income. What people pay through higher prices varies hugely, while the dividend is roughly the same for everyone. So <b>anyone who uses less than average receives more than they pay</b>. Here is a rough picture using per-person emissions for three groups of the world.</span></p>
+      <div class="ctl"><label for="cp"><span class="ja">炭素の値段（CO₂ 1トンあたり）</span><span class="en">Carbon price (per tonne CO₂)</span></label><span class="o num" id="cpO">$100</span><input type="range" id="cp" min="25" max="200" step="25" value="100"></div>
+      <div id="grps"></div>
+      <div class="legend"><span><i style="background:var(--red)"></i><span class="ja">値上がりで払う額</span><span class="en">Paid through higher prices</span></span><span><i style="background:var(--green)"></i><span class="ja">受け取る還元</span><span class="en">Dividend received</span></span></div>
+      <details class="more"><summary><span class="ja">この図の前提</span><span class="en">How this is worked out</span></summary>
+        <p class="ja" style="margin:0">1人あたりの年間排出（消費ベース、2019年）：下位50% 1.4 t、中間40% 6.1 t、上位10% 約29 t（Chancel 2022）。世界平均は約6.0 t。払う額＝排出×炭素の値段。還元は、収入の90%を<b>全員に同額</b>で返すと単純化しました（実際の設計では40%を使用量の少ない人に多めに配るので、少ない人にはさらに有利です）。賃金や物価を通じた間接の影響、国ごとの違いは入れていません。国の中で見ると差はこれより小さく、提案自身の見込みは「標準的な前提で約7割がプラス（前提により6割前後〜7割台前半）」です。損益の境目にいる世帯に PTE から上乗せして、少なくとも7割をプラスにするのが「多数派保証ルール」です。</p>
+        <p class="en" style="margin:0">Per-person annual emissions (consumption-based, 2019): bottom 50% 1.4 t, middle 40% 6.1 t, top 10% ~29 t (Chancel 2022); world average ~6.0 t. Paid = emissions × carbon price. For simplicity the dividend returns 90% of revenue <b>in equal shares</b> (the actual design weights 40% toward people who use less, which helps low users even more). Indirect effects through wages and prices, and differences between countries, are left out. Within a single country the gaps are smaller; the proposal’s own estimate is that about 70% come out ahead under standard assumptions (from about 60% to the low 70s depending on assumptions). The majority-benefit rule uses the PTE to top up households just short of break-even so that at least 70% gain.</p>
+      </details>
+      <div class="cta" style="margin-top:16px"><a class="p st" data-p="tools/simulator/" href="https://tamorist.github.io/steering/tools/simulator/"><span class="ja">還元シミュレーターで、自分の家庭を確かめる ↗</span><span class="en">Check your own household in the simulator ↗</span></a></div>
+    </div>
+
+    <h3 style="margin-top:44px"><span class="ja">モジュールどうしが、たがいを強め合う</span><span class="en">How the modules reinforce each other</span></h3>
+    <p class="narrow" style="font-size:15px"><span class="ja">これまでの設計では、上限はコストとして感じられ、世論が上限を押し下げてきました。Planetary OS では配当が上限から生まれるので、<b>世論に上限を守る理由</b>が生まれます。さらに、自分で自分を強める循環もあります。</span><span class="en">Under the old design, caps felt like a cost and public opinion pushed them down. Here the dividend comes from the cap, so <b>public opinion has a reason to defend it</b>. And there is a self-reinforcing loop:</span></p>
+    <div class="loop">
+      <span class="n"><span class="ja">使う量が少ないほど得</span><span class="en">Using less pays</span></span><span class="a">→</span>
+      <span class="n"><span class="ja">化石燃料の需要が下がる</span><span class="en">Fossil demand falls</span></span><span class="a">→</span>
+      <span class="n"><span class="ja">競売の価格が下がる</span><span class="en">Auction price falls</span></span><span class="a">→</span>
+      <span class="n"><span class="ja">上限をより速く絞れる</span><span class="en">The cap can tighten faster</span></span><span class="a">↺</span>
+    </div>
+    <table class="ba">
+      <thead><tr><th><span class="ja">これまで</span><span class="en">Until now</span></th><th></th><th><span class="ja">Planetary OS では</span><span class="en">Under Planetary OS</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="ja">今だけが負担していた</span><span class="en">Only the present paid</span></td><td class="ar">→</td><td><span class="ja">過去の受益者も BEI を通じて負担する</span><span class="en">Past beneficiaries contribute through BEI</span></td></tr>
+        <tr><td><span class="ja">減らすと損をした</span><span class="en">Reducing was a loss</span></td><td class="ar">→</td><td><span class="ja">使う量が少ないほど、多く受け取る</span><span class="en">The less you use, the more you receive</span></td></tr>
+        <tr><td><span class="ja">世論が上限を押し下げた</span><span class="en">Public opinion pushed caps down</span></td><td class="ar">→</td><td><span class="ja">世論が上限を守る</span><span class="en">Public opinion defends the cap</span></td></tr>
+        <tr><td><span class="ja">選挙のあとで上限が覆された</span><span class="en">Caps were reversed after elections</span></td><td class="ar">→</td><td><span class="ja">上限は一方向にしか動かず、二重の鍵で守られる</span><span class="en">The cap moves one way, protected by the double key</span></td></tr>
+      </tbody>
+    </table>
+    <p class="small" style="margin-top:14px"><span class="ja">自転車で通勤する、週に何日か在宅で働く、負担の小さい食べ物やモノを選ぶ、必要のないものを買わない。多くの場合いちばん負担が小さいのは「しないこと」で、それが<b>ほめられるだけでなく、はじめて報われる</b>ようになります（食べ物については姉妹サイト<a href="https://tamorist.github.io/83-billion/?lang=ja">「830億の理由」</a>も）。</span><span class="en">Cycling to work, working from home some days, choosing lower-impact food and goods, not buying what you don’t need: often the lowest-impact choice is to do less, and for the first time it is <b>rewarded rather than merely praised</b> (on food, see the sister site <a href="https://tamorist.github.io/83-billion/">83 Billion Reasons</a>).</span></p>
+  </div>
+</section>
+
+<!-- 4 CLUB -->
+<section id="club" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="chapter" style="--c:var(--teal)"><span class="cn">4</span><span class="ja">世界政府なしで広がる</span><span class="en">Scaling without a world government</span></p>
+    <h2><span class="ja">200か国の合意を待たない。<br>「入る価値のあるクラブ」から始める。</span><span class="en">Don’t wait for 200 countries.<br>Start with a club worth joining.</span></h2>
+    <div class="guide"><span class="gchar" data-mood="smile"></span><p class="bubble"><span class="ja">合言葉は<b>「あなたがやるなら、私もやる」</b>。仲間が増えるほど、目標も高くなっていくよ。</span><span class="en">The motto is <b>“We will if you will.”</b> The more members join, the higher the ambition goes.</span></p></div>
+    <p class="lead narrow"><span class="ja">経済学者ウィリアム・ノードハウスの「気候クラブ」の考えをもとに、意欲のある国と都市のクラブから始めます。各国は自国の税・決済・通関に<b>連動条項を一つ</b>加えてつながります。クラブで決めるのは「収入の大部分を家計に還す」といった結果で、還し方は各国が選べます。<b>主権を手放す国はなく、世界政府も必要ありません。</b></span><span class="en">Building on economist William Nordhaus’s idea of a “climate club”, Planetary OS starts with willing countries and cities. Each connects through <b>a single linkage clause</b> in its existing tax, payment and customs systems. The club agrees on outcomes — such as returning most revenue to households — and each country chooses how. <b>No country gives up sovereignty, and no world government is needed.</b></span></p>
+
+    <div class="card" style="background:var(--bg)">
+      <h3><span class="ja">クラブの規模と、年間の削減率</span><span class="en">Club size and the yearly reduction rate</span><span class="ill"><span class="ja">一例</span><span class="en">illustrative</span></span></h3>
+      <div class="club" aria-hidden="true">
+        <div><div class="bar" style="height:30%">3%</div></div>
+        <div><div class="bar" style="height:50%">5%</div></div>
+        <div><div class="bar" style="height:70%">7%</div></div>
+        <div><div class="bar last" style="height:92%"><span class="ja" style="font-size:13px;text-align:center;line-height:1.3">予算<br>から</span><span class="en" style="font-size:13px;text-align:center;line-height:1.3">from<br>budget</span></div></div>
+      </div>
+      <div class="clubx">
+        <div><b><span class="ja">20%未満</span><span class="en">under 20%</span></b><span class="ja">年3%</span><span class="en">3% a year</span></div>
+        <div><b>20–40%</b><span class="ja">年5%</span><span class="en">5% a year</span></div>
+        <div><b>40–60%</b><span class="ja">年7%</span><span class="en">7% a year</span></div>
+        <div><b><span class="ja">60%以上</span><span class="en">60% or more</span></b><span class="ja">残りの炭素予算から</span><span class="en">derived from the carbon budget</span></div>
+      </div>
+      <p class="small" style="margin:12px 0 0"><span class="ja">横軸：メンバーの排出が世界の排出に占める割合。期限が来たら規模にかかわらず次の段へ進む「時間による引き金」もあり、目標を避けるためにクラブを小さく保つことはできません。</span><span class="en">Horizontal axis: members’ share of global emissions. A time-based trigger also moves the club to the next step on a fixed date, so members can’t keep it small to dodge tighter targets.</span></p>
+    </div>
+
+    <div class="why4">
+      <div><b>✅ <span class="ja">入ると得をする</span><span class="en">Joining pays</span></b><span class="ja">エネルギーの安定、保証された投資、おたがいの市場、住民への還元、新しい産業での先行者の立場。</span><span class="en">Energy security, guaranteed investment, access to each other’s markets, dividends for residents, a first-mover position in new industries.</span></div>
+      <div><b>🚧 <span class="ja">入らないと損をする</span><span class="en">Staying out costs</span></b><span class="ja">国境炭素調整で、クラブの外からの輸入品にも同じ炭素のコストを。ただ乗りとカーボン・リーケージの利点がなくなる。</span><span class="en">A carbon border adjustment applies the same carbon cost to imports from outside — removing the gain from free-riding and the risk of leakage.</span></div>
+      <div><b>📈 <span class="ja">参加が増えるほど、目標が高くなる</span><span class="en">Ambition rises with membership</span></b><span class="ja">「あなたがやるなら、私もやる」を、ルールに組み込む。</span><span class="en">“We will if you will” — written into the rules.</span></div>
+      <div><b>📜 <span class="ja">ルールは立ち上げ時に決めておく</span><span class="en">Rules fixed at launch</span></b><span class="ja">段階の境目・削減率・早く入る国と遅く入る国の条件を前もって公開。早く入る理由がはっきりする。</span><span class="en">Thresholds, rates and terms for early and late entrants are published in advance — a clear reason to join early.</span></div>
+    </div>
+    <p class="small" style="margin-top:16px"><span class="ja">最初に動きやすいのは、化石燃料の輸入国、気候変動の影響を最も受けやすい国、保険会社や長期の投資家、意欲のある都市や地域です。</span><span class="en">Natural first movers: fossil-fuel importers, the countries most exposed to climate impacts, insurers and long-term investors, and ambitious cities and regions.</span></p>
+  </div>
+</section>
+
+<!-- 5 WHO -->
+<section id="who">
+  <div class="wrap">
+    <p class="chapter" style="--c:var(--amber)"><span class="cn">5</span><span class="ja">誰が：Youth GCC（提案A）</span><span class="en">Who: Youth GCC (Proposal A)</span></p>
+    <h2><span class="ja">国境を越えて、<br>未来のために語る主体をつくる。</span><span class="en">A voice for the future,<br>across borders.</span></h2>
+    <div class="guide"><span class="gchar" data-mood="smile"></span><p class="bubble"><span class="ja">いちばん大きな影響を受けるのは、若い人と、まだ生まれていない人たち。なのに、いまは<b>ほとんど声がない</b>んだ。その声の通り道をつくる提案だよ。</span><span class="en">The people with the most at stake — the young and the not-yet-born — have <b>almost no voice</b> today. This is a proposal to give that voice a channel.</span></p></div>
+    <p class="lead narrow"><span class="ja">設計図は、ひとりでに実行されません。<b>Youth GCC</b>（将来世代のための、若者主導の地球市民会議）は、政府でも国連の代わりでもなく、国家どうしの政治のとなりにつくる<b>「もう一つの政治の回路」</b>です。地球規模の問題を見つけ、世界市民の立場から政策の選択肢をつくり、公開で熟議し、結果を今の意思決定者に示します。</span><span class="en">A blueprint does not implement itself. The <b>Youth GCC</b> (Youth-Led Global Citizens’ Congress for Future Generations) is not a government and does not replace the UN. It builds <b>a second circuit of politics</b> alongside inter-state politics: identifying global problems, developing options from the standpoint of world citizens, deliberating in public, and presenting the results to today’s decision-makers.</span></p>
+    <div class="org">
+      <div style="--c:var(--amber)"><span class="ic">🧭</span><b><span class="ja">若者評議会</span><span class="en">Youth Council</span></b><span class="ja">おおむね15〜35歳、世界の各地域から。議題を決め、組織を運営する。</span><span class="en">Roughly ages 15–35, from every region. Sets the agenda and runs the organisation.</span></div>
+      <div style="--c:var(--teal)"><span class="ic">🎲</span><b><span class="ja">世界市民会議</span><span class="en">World Citizens’ Assembly</span></b><span class="ja">すべての世代から<b>くじ引き</b>で選び、世界の人口構成を映す。裁判員制度と同じ考え方。</span><span class="en">Chosen <b>by lot</b> from all generations, stratified to mirror the world’s population — the same principle as a jury.</span></div>
+      <div style="--c:var(--blue)"><span class="ic">📚</span><b><span class="ja">世界政策機構</span><span class="en">World Policy Institute</span></b><span class="ja">課題ごとに実行可能な<b>選択肢をいくつも</b>。「正解」は一つにせず、費用・リスク・トレードオフを示す。</span><span class="en">Sets out <b>several workable options</b> per issue — never a single “right answer” — with costs, risks and trade-offs.</span></div>
+      <div style="--c:var(--green)"><span class="ic">🧪</span><b><span class="ja">世界政策実証局</span><span class="en">World Policy Laboratory</span></b><span class="ja">シミュレーションと小さな試行で確かめてから広げる。失敗も公開する。</span><span class="en">Tests options through simulation and small pilots before scaling; publishes failures as well as successes.</span></div>
+      <div style="--c:var(--muted)"><span class="ic">🔍</span><b><span class="ja">独立監査</span><span class="en">Independent audit</span></b><span class="ja">手続き、財務、利益相反を確かめる。</span><span class="en">Checks procedures, finances and conflicts of interest.</span></div>
+    </div>
+    <div class="roles">
+      <div><b><span class="ja">専門家</span><span class="en">Experts</span></b><span class="ja">事実と選択肢を明らかにする</span><span class="en">clarify facts and options</span></div>
+      <div><b><span class="ja">市民</span><span class="en">Citizens</span></b><span class="ja">価値と優先順位を判断する</span><span class="en">judge values and priorities</span></div>
+      <div><b>AI</b><span class="ja">翻訳・要約・論点の整理を手伝う（決めはしない）</span><span class="en">help with translation, summaries, mapping arguments — never decide</span></div>
+    </div>
+    <p class="narrow" style="font-size:15px;margin-top:22px"><span class="ja">Youth GCC に強制する力はありません。その代わり、政府や国際機関に、提言へ<b>公の場で応え、退けるならその理由を公開する</b>よう求めます。正統性は名乗って得るものではなく、開かれた参加、透明な手続き、積み重ねた実績で得ていくものです。くじ引きの市民会議は、アイルランド（憲法の問題）やフランスの「気候市民会議」ですでに試されています。最初の議題は気候、次の候補は高度な AI の統治です。</span><span class="en">The Youth GCC has no power to compel. Instead it asks governments and international bodies to <b>respond publicly to its recommendations, and publish their reasons when they reject them</b>. Legitimacy is earned, not declared: through open participation, transparent procedures and a track record. Citizens’ assemblies chosen by lot have already been used in Ireland (on constitutional questions) and in France’s Citizens’ Convention for Climate. The first agenda is climate; the governance of advanced AI is next.</span></p>
+  </div>
+</section>
+
+<!-- 6 HOW -->
+<section id="how" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="chapter" style="--c:var(--vio)"><span class="cn">6</span><span class="ja">どのように：Global Citizen Will Platform（提案B）</span><span class="en">How: Global Citizen Will Platform (Proposal B)</span></p>
+    <h2><span class="ja">ばらばらの声を、<br>決定に届く支持に変える。</span><span class="en">Turn scattered voices<br>into support that reaches decisions.</span></h2>
+    <p class="lead narrow"><span class="ja">すでに何百万もの人がデモに参加し、署名し、活動しています。けれどもその力はばらばらで、多くは国の中の議論にとどまっています。<b>Global Citizen Will Platform</b> は、今ある運動を<b>連合させる</b>、開かれた共通の基盤です。団体は名前も自主性も活動もそのままに、提案と支持の共通の規格を通じて「共同発起人」として加わります。</span><span class="en">Millions already march, sign and organise. But their efforts are fragmented and mostly stay inside national agendas. The <b>Global Citizen Will Platform</b> is shared, open infrastructure that <b>federates</b> existing movements. Groups keep their names, autonomy and campaigns, and join as Co-Initiators through a common standard for proposals and support.</span></p>
+    <ul class="narrow" style="font-size:14.5px">
+      <li><span class="ja">オープンソースの熟議のしくみ（例：Decidim をもとに）で提案を集めて比べる</span><span class="en">An open-source deliberation engine (e.g. based on Decidim) to collect and compare proposals</span></li>
+      <li><span class="ja">確かめられた支持を、残りの炭素予算など地球の指標と並べて示すダッシュボード</span><span class="en">A shared dashboard showing verified support alongside planetary indicators such as the remaining carbon budget</span></li>
+      <li><span class="ja">還元シミュレーターのような、政策が自分にとって何を意味するかを確かめる道具</span><span class="en">Tools like the Citizen Dividend Simulator, so people can see what a policy means for them</span></li>
+      <li><span class="ja">プライバシーを最初から設計に：個人データは最小限、方法は公開、二重カウントを防ぐ</span><span class="en">Privacy by design: minimal personal data, published methods, checks against double counting</span></li>
+    </ul>
+    <h3 style="margin-top:30px"><span class="ja">支持が決定に届く、4つの合法的な回路</span><span class="en">Four lawful channels to decisions</span></h3>
+    <div class="ch4">
+      <div><span class="ic">🌐</span><b><span class="ja">多国間</span><span class="en">Multilateral</span></b><span class="ja">影響を受けやすい国など意欲ある政府と、国際的な場へ</span><span class="en">With willing governments, such as climate-vulnerable states, in international forums</span></div>
+      <div><span class="ic">⚖️</span><b><span class="ja">法</span><span class="en">Legal</span></b><span class="ja">確かめられたデータと熟議の記録を、気候訴訟に役立てる</span><span class="en">Verified data and deliberation records that can inform climate litigation</span></div>
+      <div><span class="ic">🗳️</span><b><span class="ja">選挙</span><span class="en">Electoral</span></b><span class="ja">有権者が候補者や政党に問える、具体的な質問に</span><span class="en">Concrete questions voters can put to candidates and parties</span></div>
+      <div><span class="ic">🛒</span><b><span class="ja">市場</span><span class="en">Markets</span></b><span class="ja">消費者や投資家が、スタンダードに沿って選べるように</span><span class="en">Helping consumers and investors align their choices with the Standard</span></div>
+    </div>
+    <div class="ask">
+      <small><span class="ja">政治への問いは「何とかしてください」ではなく――</span><span class="en">Not “please act”, but —</span></small>
+      <b class="serif"><span class="ja">「このしくみに、つながりますか？」</span><span class="en">“Will you connect to this system?”</span></b>
+    </div>
+  </div>
+</section>
+
+<!-- 7 PACKAGE -->
+<section id="package">
+  <div class="wrap">
+    <p class="chapter" style="--c:var(--teal)"><span class="cn">7</span><span class="ja">なぜパッケージなのか</span><span class="en">Why a package</span></p>
+    <h2><span class="ja">設計図・担い手・回路。<br>3つがそろって、輪が閉じる。</span><span class="en">Blueprint, carriers, channel.<br>Together they close the loop.</span></h2>
+    <div class="guide"><span class="gchar" data-mood="happy"></span><p class="bubble"><span class="ja">どれか一つだけだと、うまくいかない。<b>3つで一つのチーム</b>なんだ。</span><span class="en">Any one alone falls short. <b>The three work as one team.</b></span></p></div>
+    <div class="pkg">
+      <div style="--c:var(--teal)"><span class="k"><span class="ja">何を · 提案C</span><span class="en">WHAT · C</span></span><b>Planetary OS</b><p><span class="ja">動作ルール</span><span class="en">The operating rules</span></p><p class="fail"><span class="ja">担い手のいない設計図は、紙の上にとどまる。</span><span class="en">A blueprint without carriers stays on paper.</span></p></div>
+      <div style="--c:var(--amber)"><span class="k"><span class="ja">誰が · 提案A</span><span class="en">WHO · A</span></span><b>Youth GCC</b><p><span class="ja">担い手と、その制度</span><span class="en">The actor and its institutions</span></p><p class="fail"><span class="ja">設計図のない担い手は、方向を見失い、一般的な要求で終わる。</span><span class="en">Carriers without a blueprint drift into general demands.</span></p></div>
+      <div style="--c:var(--vio)"><span class="k"><span class="ja">どのように · 提案B</span><span class="en">HOW · B</span></span><b>Global Citizen Will Platform</b><p><span class="ja">市民の意思から決定への回路</span><span class="en">The channel from civic will to decisions</span></p><p class="fail"><span class="ja">決定への回路がなければ、小さいまま無視される。</span><span class="en">Without a channel to decisions, both stay small and easy to ignore.</span></p></div>
+    </div>
+    <h3 style="margin-top:36px"><span class="ja">3つの提案がめぐるサイクル</span><span class="en">The cycle they run together</span></h3>
+    <ol class="cycle">
+      <li><span class="ja">世界政策機構が、ルールの第1版「Planetary OS スタンダード」を起草</span><span class="en">The Institute drafts a first edition of the rules: the Planetary OS Standard</span></li>
+      <li><span class="ja">プラットフォームが、シミュレーターとともに公開</span><span class="en">The Platform publishes it with the simulator</span></li>
+      <li><span class="ja">世界市民会議が熟議する</span><span class="en">The citizens’ assembly deliberates on it</span></li>
+      <li><span class="ja">協力する運動が支持を集める</span><span class="en">Partner movements gather support</span></li>
+      <li><span class="ja">世界政策実証局が試行する</span><span class="en">The Laboratory runs pilots</span></li>
+      <li><span class="ja">4つの回路で政治に「つながりますか？」と問う</span><span class="en">The four channels ask politics: “Will you connect?”</span></li>
+      <li><span class="ja">結果を次の版に生かす ↺</span><span class="en">Results feed into the next edition ↺</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8 FAQ -->
+<section id="faq" class="faq" style="background:var(--bg2)">
+  <div class="wrap narrow">
+    <p class="chapter" style="--c:#3c3e39"><span class="cn">8</span><span class="ja">よくある疑問</span><span class="en">Common objections</span></p>
+    <h2><span class="ja">それって、結局……？</span><span class="en">Isn’t this just…?</span></h2>
+    <details><summary><span class="ja">手の込んだ炭素税ではないの？</span><span class="en">Isn’t this just a carbon tax with extra steps?</span></summary><p><span class="ja">違います。炭素税は価格を決めて量がついてくることを期待します。Planetary OS は<b>量を科学で決め</b>、それを一方向にし、収入の大部分を市民に返し、過去の受益者の負担を加え、二重の鍵でルールを守ります。この追加部分は、これまでの炭素価格が撤回されてきた理由そのものに向けたものです。</span><span class="en">No. A carbon tax sets a price and hopes the quantity follows. Planetary OS <b>sets the quantity by science</b>, makes it one-way, returns most revenue to citizens, adds a contribution from past beneficiaries, and protects the rules with a double key — additions aimed precisely at why past carbon prices were repealed.</span></p></details>
+    <details><summary><span class="ja">なぜ国連を通じて進めないの？</span><span class="en">Why not work through the UN?</span></summary><p><span class="ja">国連と対立するのではなく、一緒に進めます。ただ、ほぼ全会一致が必要な手続きだけを道にはできません。クラブなら今すぐ始められ、独立した市民の機関なら、国家がまだ検討していない選択肢をつくれます。</span><span class="en">The package works <i>with</i> the UN. But a process that needs near-unanimity can’t be the only path. A club can start now, and an independent citizens’ body can develop options states haven’t yet put on the table.</span></p></details>
+    <details><summary><span class="ja">世界政府をつくるの？</span><span class="en">Is this a world government?</span></summary><p><span class="ja">いいえ。国家は今のままです。Youth GCC は提案し公の答えを求めますが、命令はできません。Planetary OS は、国が自分で選んで入るクラブを通じて広がります。</span><span class="en">No. States remain as they are. The Youth GCC proposes and asks for public answers; it cannot give orders. Planetary OS spreads through a club countries choose to join.</span></p></details>
+    <details><summary><span class="ja">成長を否定する？「少なく暮らせ」ということ？</span><span class="en">Is it anti-growth, or a call to live with less?</span></summary><p><span class="ja">成長を禁じることも、暮らし方を決めつけることもしません。厳しく守るのは外側の物理的な限界、つまり化石燃料の炭素の総量だけで、その内側は自由です。変わるのは報われ方です。生産性の向上を労働時間の短縮として返すといった、より深い問いは、パッケージの次の層で扱います。</span><span class="en">It neither bans growth nor prescribes lifestyles. It enforces only the outer physical limit — the total amount of fossil carbon — and leaves freedom within it. What changes is the reward. Deeper questions, like returning productivity gains as shorter working hours, are taken up in later layers.</span></p></details>
+    <details><summary><span class="ja">個人が監視されるの？</span><span class="en">Will individuals be monitored?</span></summary><p><span class="ja">いいえ。厳しい上限がかかるのは経済に入ってくる化石燃料（上流）で、個人の行動ではありません。パッケージの原則として、個人の監視はしません。</span><span class="en">No. The strict limit applies upstream, to fossil fuels entering the economy — not to individual behaviour. The package’s principles exclude individual surveillance.</span></p></details>
+    <details><summary><span class="ja">数値は誰が決めたの？</span><span class="en">Who decided the numbers?</span></summary><p><span class="ja">まだ誰も決めていません。数値はすべて一例です。批判され、試され、書き直されるように、作業のための草案として公開しています。</span><span class="en">No one, yet. Every figure is illustrative. The design is published as a working draft so it can be criticised, tested and rewritten.</span></p></details>
+    <p class="small" style="margin-top:16px"><a class="st" data-p="proposals/c-faq/" href="https://tamorist.github.io/steering/proposals/c-faq/"><span class="ja">ほかの疑問と答え：Planetary OS のよくある質問 ↗</span><span class="en">More objections and answers: the Planetary OS FAQ ↗</span></a></p>
+  </div>
+</section>
+
+<!-- 9 JOIN -->
+<section id="join">
+  <div class="wrap">
+    <p class="chapter" style="--c:var(--green)"><span class="cn">9</span><span class="ja">どこから始まり、どう参加できるか</span><span class="en">Where it starts, and how to take part</span></p>
+    <h2><span class="ja">我慢ではなく、卒業。</span><span class="en">A graduation, not a sacrifice.</span></h2>
+    <div class="guide"><span class="gchar" data-mood="happy"></span><p class="bubble"><span class="ja">最後まで読んでくれて、ありがとう。ルールは自然の法則じゃなくて、<b>人どうしの約束ごと</b>。だから、書き換えられるんだよ。</span><span class="en">Thank you for reading to the end. Rules aren’t laws of nature — they’re <b>agreements between people</b>. That’s why they can be rewritten.</span></p></div>
+    <p class="lead narrow"><span class="ja">これは、貧しくなろうという呼びかけでも、誰かを倒そうという呼びかけでもありません。役目を果たしたしくみから、時間にゆとりがあり、安心でき、住み続けられる地球のある暮らしへ進む「卒業」です。最初の段階は、あえて控えめで具体的です（一例では約18か月）。</span><span class="en">This is not a call to become poorer, or to overthrow anyone. It is a graduation: moving on from a system that served its purpose, toward more time, more security and a livable planet. The first stage is deliberately modest and concrete (about eighteen months in the illustration).</span></p>
+    <ol class="steps">
+      <li><span class="ja">気候科学・経済学・法学・工学の作業部会による「Planetary OS スタンダード」第1版</span><span class="en">A first edition of the Planetary OS Standard, drafted by working groups in climate science, economics, law and engineering</span></li>
+      <li><span class="ja">誰でも使える還元シミュレーター</span><span class="en">A public Citizen Dividend Simulator</span></li>
+      <li><span class="ja">協力団体と Youth GCC を立ち上げ、最初の市民会議でスタンダードを見直す</span><span class="en">Launching the Youth GCC with partners, and a first citizens’ assembly to review the Standard</span></li>
+    </ol>
+    <p class="narrow" style="font-size:15px"><span class="ja">そのあと、意欲のある自治体や小さな島国での試行に進み、政治に問いを投げかけます。</span><span class="en">Then pilots with willing municipalities and small island states, and the question is put to politics.</span></p>
+    <h3 style="margin-top:30px"><span class="ja">今からできること</span><span class="en">Ways to take part now</span></h3>
+    <div class="why4" style="margin-top:12px">
+      <div><b>🧮 <span class="ja">シミュレーターを試す</span><span class="en">Try the simulator</span></b><span class="ja">自分の前提で、設計を確かめてみてください。</span><span class="en">Test the design against your own assumptions.</span></div>
+      <div><b>🔨 <span class="ja">批判する</span><span class="en">Criticise it</span></b><span class="ja">設計は、誰かが弱点を探してくれて、はじめて良くなります。</span><span class="en">The design improves only if people look for its weak points.</span></div>
+      <div><b>🤝 <span class="ja">参加する</span><span class="en">Join</span></b><span class="ja">若い共同発起人、協力する運動、研究者、シビックテックの開発者、試行を引き受ける自治体を探しています。</span><span class="en">Looking for young co-founders, partner movements, researchers, civic technologists, and municipalities willing to host pilots.</span></div>
+      <div><b>📣 <span class="ja">話題にする</span><span class="en">Talk about it</span></b><span class="ja">「減らすと損をするルール」は変えられる、と身近な人に。このページの共有も歓迎です。</span><span class="en">Tell people the rules can change so that reducing pays. Sharing this page helps too.</span></div>
+    </div>
+    <div class="cta">
+      <a class="p st" data-p="tools/simulator/" href="https://tamorist.github.io/steering/tools/simulator/"><span class="ja">シミュレーターを試す ↗</span><span class="en">Try the simulator ↗</span></a>
+      <a class="p st" data-p="join/" href="https://tamorist.github.io/steering/join/"><span class="ja">共同発起人として参加する ↗</span><span class="en">Join as a Co-Initiator ↗</span></a>
+      <a class="s" id="shareX" href="#" target="_blank" rel="noopener"><span class="ja">X で共有</span><span class="en">Share on X</span></a>
+      <button id="copyLink"><span class="ja">リンクをコピー</span><span class="en">Copy link</span></button>
+    </div>
+    <blockquote class="pull" style="margin-top:40px"><span class="ja">舵を取らずに成長してきた文明は、<br>いま、限界の内側で舵を取ることを学ぶ。</span><span class="en">A civilisation that grew without steering<br>now has to learn to steer within limits.</span></blockquote>
+
+    <h3 style="margin-top:44px"><span class="ja">提案の本体を読む（「限界の内側で、舵を取る」）</span><span class="en">Read the full proposal (<i>Steering Within Limits</i>)</span></h3>
+    <div class="reads">
+      <a class="st" data-p="overview/" href="https://tamorist.github.io/steering/overview/"><small><span class="ja">約7分</span><span class="en">≈ 3–7 MIN</span></small><b><span class="ja">1ページ概要</span><span class="en">One-page overview</span></b><span class="d"><span class="ja">問題、3つの提案、その関係</span><span class="en">The problem, the three proposals, how they fit</span></span></a>
+      <a class="st" data-p="why-now/" href="https://tamorist.github.io/steering/why-now/"><small><span class="ja">約10分</span><span class="en">≈ 10 MIN</span></small><b><span class="ja">なぜ今か</span><span class="en">Why now?</span></b><span class="d"><span class="ja">文明が舵を取ることを学ばなければならない理由</span><span class="en">Why civilisation must now learn to steer</span></span></a>
+      <a class="st" data-p="start/" href="https://tamorist.github.io/steering/start/"><small><span class="ja">約45分</span><span class="en">≈ 15–45 MIN</span></small><b><span class="ja">はじめての方へ（ひと続きで読む）</span><span class="en">Start here: the whole idea in one read</span></b><span class="d"><span class="ja">このページのもとになった解説</span><span class="en">The guide this page is based on</span></span></a>
+      <a class="st" data-p="package/" href="https://tamorist.github.io/steering/package/"><small><span class="ja">参加・資金・研究</span><span class="en">TAKING PART · FUNDING · RESEARCH</span></small><b><span class="ja">パッケージ提案書</span><span class="en">Package proposal</span></b><span class="d"><span class="ja">役割、ロードマップ、リスク、お願いしたいこと</span><span class="en">Roles, roadmap, risks, and what we are asking for</span></span></a>
+      <a class="st" data-p="proposals/c-summary/" href="https://tamorist.github.io/steering/proposals/c-summary/"><small><span class="ja">提案C</span><span class="en">PROPOSAL C</span></small><b><span class="ja">Planetary OS（要約）</span><span class="en">Planetary OS (summary)</span></b><span class="d"><span class="ja">4つのモジュールとクラブの設計</span><span class="en">The four modules and the club</span></span></a>
+      <a class="st" data-p="series/part-0/" href="https://tamorist.github.io/steering/series/part-0/"><small><span class="ja">連載</span><span class="en">SERIES</span></small><b><span class="ja">地球のOSを書き換える</span><span class="en">Rewriting the Planet’s OS</span></b><span class="d"><span class="ja">全8回で、ひとつずつ</span><span class="en">Eight parts, one step at a time</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST -->
+<section class="honest" id="honest">
+  <div class="wrap narrow">
+    <p class="eyebrow"><span class="ja">数字の限界</span><span class="en">Limits of the numbers</span></p>
+    <h2 style="font-size:24px"><span class="ja">誇張しないこと</span><span class="en">What we don’t overstate</span></h2>
+    <ul class="ja">
+      <li><b>これは提案であり、実施されている政策ではありません。</b>作者（森 達哉）による作業中の草案で、批判と検証を受けて書き直されることを前提に公開しています。</li>
+      <li><b>名前・割合・数値はすべて「一例」です。</b>90%・60/40・年8%・クラブの削減率・4分の3などは方向を示すためのもので、本当の値は専門家の検証と市民の熟議で決めます。</li>
+      <li><b>「約7割がプラス」は計算上の想定で、約束ではありません。</b>前提によって6割前後〜7割台前半まで変わり、賃金や経済全体を通じた間接の影響は推計するしかありません。多数派保証も PTE が出せる範囲に限られます。</li>
+      <li><b>このページの還元の図は、私たちの単純化した図解です。</b>世界の3グループの平均排出を使い、全額を同額で返すと仮定しています。個々の家庭や国の結果を示すものではありません。</li>
+      <li><b>BEI の約1兆ドルは一例の試算です。</b>課税のしかた、回避、各国の参加によって大きく変わります。</li>
+      <li><b>富と排出の分布は推計です。</b>各国の統計をつなぎ合わせたモデルによるもので、とくに最上位には大きな不確かさがあります。</li>
+      <li><b>「どう変えるべきか」は価値判断を含みます。</b>この提案は、ありうる道のひとつで、唯一の答えではありません。ほかの設計と比べることも、提案自体に組み込まれています。</li>
+    </ul>
+    <ul class="en">
+      <li><b>This is a proposal, not an existing policy.</b> It is a working draft by the author (Tatsuya Mori), published so that it can be criticised, tested and rewritten.</li>
+      <li><b>All names, ratios and figures are illustrative.</b> The 90%, 60/40 split, ~8% a year, club rates and three-quarters threshold show a direction; real values are meant to come from expert review and public deliberation.</li>
+      <li><b>“About 70% come out ahead” is a model estimate, not a promise.</b> It ranges from about 60% to the low 70s depending on assumptions; indirect effects through wages and the wider economy can only be estimated, and the majority-benefit guarantee is limited by what the PTE can spend.</li>
+      <li><b>The dividend chart on this page is our own simplified illustration.</b> It uses average emissions for three world groups and assumes all revenue is returned equally. It does not show results for any particular household or country.</li>
+      <li><b>The ~USD 1 trillion for BEI is one illustrative estimate.</b> It depends heavily on design, avoidance and which countries take part.</li>
+      <li><b>Wealth and emissions distributions are estimates</b> from models combining national statistics, with large uncertainty at the very top.</li>
+      <li><b>“What to change” involves values.</b> This proposal is one possible path, not the only answer — and comparing it with other designs is built into the proposal itself.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SOURCES -->
+<section id="sources" class="srcs" style="padding-top:56px">
+  <div class="wrap narrow">
+    <p class="eyebrow"><span class="ja">出典</span><span class="en">Sources</span></p>
+    <ol>
+      <li><a class="st" data-p="start/" href="https://tamorist.github.io/steering/start/"><span class="ja">森 達哉「ひと続きで読む『限界の内側で、舵を取る』」第1版（2026年10月）</span><span class="en">Mori, T. “The Whole Idea, in One Read: Steering Within Limits”, 1st edition (October 2026)</span></a> <span class="use"><span class="ja">このページの提案内容（Planetary OS・Youth GCC・Global Citizen Will Platform）と、すべての「一例」の数値</span><span class="en">The proposal on this page (Planetary OS, Youth GCC, Global Citizen Will Platform) and all illustrative figures</span></span></li>
+      <li><a href="https://wid.world/document/world-inequality-report-2022/">World Inequality Report 2022</a>; <a href="https://doi.org/10.1038/s41893-022-00955-z">Chancel, L. (2022) Global carbon inequality over 1990–2019. <i>Nature Sustainability</i></a> <span class="use"><span class="ja">富：上位10% 76%・下位50% 2%。排出：上位10% 48%・中間40% 40%・下位50% 12%。1人あたり 1.4 / 6.1 / 約29 t（2019年）</span><span class="en">Wealth: top 10% 76%, bottom 50% 2%. Emissions: top 10% 48%, middle 40% 40%, bottom 50% 12%; per person 1.4 / 6.1 / ~29 t (2019)</span></span></li>
+      <li><a href="https://ourworldindata.org/co2-emissions">Global Carbon Project via Our World in Data</a>; <a href="https://population.un.org/wpp/">UN World Population Prospects 2024</a> <span class="use"><span class="ja">この50年で人口は約2倍、化石燃料の年間 CO₂ は2倍以上、累積の約7割がこの50年（姉妹サイト「足りる経済へ」で計算）</span><span class="en">In 50 years population ~×2, annual fossil CO₂ more than ×2, ~70% of the cumulative total (calculated on the sister site Enough for All)</span></span></li>
+      <li><span class="ja">オーストラリアの炭素価格制度（2012年7月導入、2014年7月廃止）</span><span class="en">Australia’s carbon pricing mechanism (introduced July 2012, repealed July 2014)</span></li>
+      <li><span class="ja">フランスの燃料税引き上げと「黄色いベスト運動」（2018年11月〜、政府は12月に引き上げを撤回）</span><span class="en">France’s fuel-tax rise and the “yellow vests” movement (from November 2018; the government withdrew the rise in December)</span></li>
+      <li><span class="ja">カナダの消費者向け炭素課金（2025年4月1日に税率をゼロに）</span><span class="en">Canada’s consumer fuel charge (set to zero from 1 April 2025)</span></li>
+      <li><span class="ja">EU 排出量取引制度（2005年〜）の排出枠の余剰と、市場安定化リザーブ（2019年〜）</span><span class="en">The EU Emissions Trading System (from 2005): allowance surplus and the Market Stability Reserve (from 2019)</span></li>
+      <li><a href="https://doi.org/10.1257/aer.15000001">Nordhaus, W. (2015) Climate Clubs: Overcoming Free-riding in International Climate Policy. <i>American Economic Review</i> 105(4)</a> <span class="use"><span class="ja">気候クラブの考え方</span><span class="en">The climate club idea</span></span></li>
+      <li><span class="ja">アイルランド市民議会（2016〜2018年）、フランス気候市民会議（2019〜2020年、くじ引きで選ばれた150人）</span><span class="en">Ireland’s Citizens’ Assembly (2016–2018); France’s Citizens’ Convention for Climate (2019–2020, 150 citizens chosen by lot)</span></li>
+      <li><a href="https://decidim.org/">Decidim</a> <span class="use"><span class="ja">オープンソースの市民参加プラットフォーム</span><span class="en">Open-source platform for citizen participation</span></span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CLIMATEWATCHMAN HUB -->
+<section class="hubband">
+  <div class="wrap narrow">
+    <a class="hubcard" href="https://tamorist.github.io/">
+      <span class="k">CLIMATEWATCHMAN</span>
+      <b class="h"><span class="ja"><span style="display:inline-block">気候危機を、理解する。</span><span style="display:inline-block">そして、止める。</span></span><span class="en">Understand the climate crisis. Then help stop it.</span></b>
+      <span class="d"><span class="ja">このサイトは、つながった5つのサイトのひとつです。全体の地図と、おすすめの読む順番はトップページで。</span><span class="en">This site is one of five connected sites. See the whole map, and a suggested reading order, on the home page.</span></span>
+      <ol>
+        <li style="--c:#c75c1a"><small>1. <span class="ja">全体像をつかむ</span><span class="en">See the whole picture</span></small><span class="ja">臨界点の手前で</span><span class="en">Before the Tipping Point</span></li>
+        <li style="--c:#d23c2f"><small>2. <span class="ja">命の数で実感する</span><span class="en">Feel it in lives</span></small><span class="ja">静かな戦争</span><span class="en">The Slow War</span></li>
+        <li style="--c:#2f6b4f"><small>3. <span class="ja">食卓から変える</span><span class="en">Change it at the table</span></small><span class="ja">830億の理由</span><span class="en">83 Billion Reasons</span></li>
+        <li style="--c:#5a4fa0"><small>4. <span class="ja">社会の仕組みから変える</span><span class="en">Change the system</span></small><span class="ja">足りる経済へ</span><span class="en">Enough for All</span></li>
+        <li class="on" style="--c:#1f6f78"><small>5. <span class="ja">解決の設計図を見る</span><span class="en">See a blueprint for change</span></small><span class="ja">ルールを書き換える<span style="display:inline-block">（いまここ）</span></span><span class="en">Rewrite the Rules (you are here)</span></li>
+      </ol>
+      <span class="go"><span class="ja">トップページへ →</span><span class="en">Go to the home page →</span></span>
+    </a>
+  </div>
+</section>
+
+<!-- SISTER SITES -->
+<section class="sister" style="padding-top:24px">
+  <div class="wrap narrow">
+    <p class="eyebrow"><span class="ja">姉妹サイト</span><span class="en">Sister sites</span></p>
+    <a class="card2" href="https://tamorist.github.io/tipping-point/" target="_blank" rel="noopener" style="--c:#c75c1a">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="t"><b><span class="ja">臨界点の手前で</span><span class="en">Before the Tipping Point</span></b>
+        <span class="d"><span class="ja">気候変動の全体像を1ページに。残された炭素予算、越えたら戻れない臨界点とその連鎖。</span><span class="en">The climate crisis on one page: the carbon budget left, tipping points and their cascades.</span></span></span>
+      <span class="go"><span class="ja">サイトへ ↗</span><span class="en">Visit ↗</span></span>
+    </a>
+    <a class="card2" href="https://tamorist.github.io/slow-war/" target="_blank" rel="noopener" style="--c:#d23c2f">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="t"><b><span class="ja">静かな戦争</span><span class="en">The Slow War</span></b>
+        <span class="d"><span class="ja">いまの CO₂ 排出が「確定」させる未来の犠牲者を、戦争と比べて見るサイト。あなたの1日の排出も計算できます。</span><span class="en">How today’s CO₂ emissions lock in future deaths, compared with history’s wars — and what your own day adds up to.</span></span></span>
+      <span class="go"><span class="ja">サイトへ ↗</span><span class="en">Visit ↗</span></span>
+    </a>
+    <a class="card2" href="https://tamorist.github.io/83-billion/" target="_blank" rel="noopener" style="--c:#2f6b4f">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="t"><b><span class="ja">830億の理由</span><span class="en">83 Billion Reasons</span></b>
+        <span class="d"><span class="ja">動物・地球・人の健康から、肉を減らす理由と無理のない始め方。</span><span class="en">Why to eat less meat — for animals, the planet and your health — and an easy way to start.</span></span></span>
+      <span class="go"><span class="ja">サイトへ ↗</span><span class="en">Visit ↗</span></span>
+    </a>
+    <a class="card2" href="https://tamorist.github.io/enough/" target="_blank" rel="noopener" style="--c:#5a4fa0">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="t"><b><span class="ja">足りる経済へ</span><span class="en">Enough for All</span></b>
+        <span class="d"><span class="ja">富の偏りと排出の偏りは、ほぼ同じ形。地球の限界のデータから、過剰消費の経済を抜け出す理由を。</span><span class="en">Wealth and emissions inequality have the same shape. The data on planetary limits, and why we must leave the overconsumption economy.</span></span></span>
+      <span class="go"><span class="ja">サイトへ ↗</span><span class="en">Visit ↗</span></span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0 0 8px"><span class="ja">プライバシー：閲覧数の計測に <a href="https://www.goatcounter.com/">GoatCounter</a> を使っています。Cookie を使わず、個人を特定しません。スライダーで選んだ内容は、どこにも送信されません。</span><span class="en">Privacy: page views are counted with <a href="https://www.goatcounter.com/">GoatCounter</a>, which uses no cookies and does not identify visitors. Nothing you choose on the slider is sent anywhere.</span></p>
+    <span class="ja">ルールを書き換える / Tatsuya Mori（@ttmori）· 提案の本体：<a class="st" data-p="" href="https://tamorist.github.io/steering/">限界の内側で、舵を取る ↗</a> · コード <a href="https://github.com/tamorist/rewrite">MIT</a>、コンテンツ <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · 姉妹サイト：<a href="https://tamorist.github.io/tipping-point/">臨界点の手前で ↗</a>・<a href="https://tamorist.github.io/slow-war/">静かな戦争 ↗</a>・<a href="https://tamorist.github.io/83-billion/">830億の理由 ↗</a>・<a href="https://tamorist.github.io/enough/">足りる経済へ ↗</a> · すべてのサイト：<a href="https://tamorist.github.io/">ClimateWatchMan ↗</a></span>
+    <span class="en">Rewrite the Rules / Tatsuya Mori (@ttmori) · Full proposal: <a href="https://tamorist.github.io/steering/">Steering Within Limits ↗</a> · Code <a href="https://github.com/tamorist/rewrite">MIT</a>, content <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · Sister sites: <a href="https://tamorist.github.io/tipping-point/">Before the Tipping Point ↗</a> · <a href="https://tamorist.github.io/slow-war/">The Slow War ↗</a> · <a href="https://tamorist.github.io/83-billion/">83 Billion Reasons ↗</a> · <a href="https://tamorist.github.io/enough/">Enough for All ↗</a> · All sites: <a href="https://tamorist.github.io/">ClimateWatchMan ↗</a></span>
+  </div>
+</footer>
+
+<script>
+// 出典は最初の4件だけ見せ、残りは「続きを表示」で開く（姉妹サイトと同じ形）
+(function () {
+  const box = document.getElementById('sources'), ol = box && box.querySelector('ol');
+  if (!ol) return;
+  const rest = ol.children.length - 4;
+  if (rest <= 0) return;
+  const btn = document.createElement('button');
+  btn.type = 'button'; btn.className = 'src-toggle';
+  const label = () => {
+    const c = box.classList.contains('src-collapsed');
+    btn.innerHTML = c ? `<span class="ja">続きを表示（あと${rest}件）</span><span class="en">Show ${rest} more</span>` : '<span class="ja">閉じる</span><span class="en">Show less</span>';
+    btn.setAttribute('aria-expanded', String(!c));
+  };
+  box.classList.add('src-collapsed'); label();
+  btn.onclick = () => { const c = box.classList.toggle('src-collapsed'); label(); if (c) btn.scrollIntoView({ block: 'nearest' }); };
+  ol.after(btn);
+})();
+/* GoatCounter（アクセス数の計測）
+   goatcounter.com で登録したサイトコード（'rewrite' → https://rewrite.goatcounter.com、要登録）。
+   公開サイト（github.io）でのみ計測し、ローカル表示は数えない。 */
+const GOATCOUNTER_CODE = 'rewrite';
+(function () {
+  if (!GOATCOUNTER_CODE || !/\.github\.io$/.test(location.hostname)) return;
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://gc.zgo.at/count.js';
+  s.dataset.goatcounter = `https://${GOATCOUNTER_CODE}.goatcounter.com/count`;
+  document.head.appendChild(s);
+})();
+
+const SITE_URL = 'https://tamorist.github.io/rewrite/';
+const STEERING = 'https://tamorist.github.io/steering/';   // 提案の本体（日本語版は /steering/ja/ 以下）
+const $ = id => document.getElementById(id);
+let lang = 'en';
+try { const s = localStorage.getItem('rw-lang'); if (s === 'en' || s === 'ja') lang = s; } catch (e) {}
+const qLang = new URLSearchParams(location.search).get('lang');
+if (qLang === 'en' || qLang === 'ja') lang = qLang;
+const ja = () => lang === 'ja';
+const fmt = (x, d = 0) => x.toLocaleString(ja() ? 'ja-JP' : 'en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+
+// ---- 還元の図解（私たちの単純化：Chancel 2022 の1人あたり排出、収入の90%を全員に同額で返す）
+const GRPS = [
+  { t: 1.4, ja: '下位50%', en: 'Bottom 50%' },
+  { t: 6.1, ja: '中間40%', en: 'Middle 40%' },
+  { t: 29, ja: '上位10%', en: 'Top 10%' },
+];
+const SHARES = [0.5, 0.4, 0.1], RETURN = 0.9;
+const MEAN = GRPS.reduce((s, g, i) => s + g.t * SHARES[i], 0);   // ≈ 6.04 t
+function renderDiv() {
+  const P = +$('cp').value, div = RETURN * MEAN * P, max = GRPS[2].t * P;
+  $('cpO').textContent = '$' + P;
+  const usd = v => '$' + fmt(Math.round(v));
+  $('grps').innerHTML = GRPS.map(g => {
+    const pay = g.t * P, net = div - pay;
+    const cls = net > 0 ? 'p' : (net > -0.15 * div ? 'z' : 'm');
+    const note = net > 0 ? (ja() ? '受け取る方が多い' : 'gets more back') : (cls === 'z' ? (ja() ? 'ほぼ損益の境目' : 'near break-even') : (ja() ? '払う方が多い' : 'pays more'));
+    const bar = (v, c) => { const w = Math.max(0.6, v / max * 100); return `<div class="br"><i style="width:${w}%;background:${c}"></i><span style="left:calc(${w}% + 6px)">${usd(v)}</span></div>`; };
+    return `<div class="grp"><div class="t"><b>${g[lang]}</b><small>${ja() ? `1人あたり ${fmt(g.t, 1)} t/年` : `${fmt(g.t, 1)} t per person/yr`}</small></div>
+      <div class="bars">${bar(pay, 'var(--red)')}${bar(div, 'var(--green)')}</div>
+      <div class="net num ${cls}">${net > 0 ? '+' : '−'}${usd(Math.abs(net))}<small>${note}</small></div></div>`;
+  }).join('') + `<p class="small" style="margin:8px 0 0">${ja() ? `1人あたり・1年。還元は全員に <b>${usd(div)}</b>（世界平均の排出 約${fmt(MEAN, 1)} t × 値段 × 90%）。` : `Per person per year. Everyone receives <b>${usd(div)}</b> (world-average emissions ~${fmt(MEAN, 1)} t × price × 90%).`}</p>`;
+}
+
+// 提案の本体へのリンク：日本語表示では /steering/ja/ 以下へ
+function setSteeringLinks() {
+  document.querySelectorAll('a.st').forEach(a => { a.href = STEERING + (ja() ? 'ja/' : '') + (a.dataset.p || ''); });
+}
+
+// ---- language
+function setLang(l) {
+  lang = l;
+  document.documentElement.lang = l;
+  document.documentElement.classList.remove('ja', 'en'); document.documentElement.classList.add(l);
+  try { localStorage.setItem('rw-lang', l); } catch (e) {}
+  if (window.cwmGuideApply) window.cwmGuideApply();
+  document.querySelectorAll('.lang button[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
+  document.title = l === 'ja' ? 'ルールを書き換える — 減らすほど得をする世界へ' : 'Rewrite the Rules — so that cutting emissions pays';
+  renderDiv(); setSteeringLinks(); setShare();
+}
+function guideSVG(mood) {
+  const brow = mood === 'worry' ? '<path d="M37 44l8-3M71 41l8 3" stroke="#2b2f2c" stroke-width="2.6" stroke-linecap="round"/>' : '';
+  const mouth = mood === 'happy'
+    ? '<path d="M49 61q9 11 18 0z" fill="#7a3b33"/><path d="M53 66q5 3 10 0" fill="#e88b84"/>'
+    : mood === 'worry'
+      ? '<path d="M51 65q4-3 7 0t7 0" stroke="#2b2f2c" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
+      : '<path d="M51 61q7 6 14 0" stroke="#2b2f2c" stroke-width="2.6" fill="none" stroke-linecap="round"/>';
+  return `<svg viewBox="0 0 116 116" aria-hidden="true">
+    <ellipse cx="58" cy="108" rx="30" ry="4" fill="#000" opacity=".08"/>
+    <path d="M58 14c2-8 9-12 16-11-1 8-8 13-16 11z" fill="#4f9a6a"/><path d="M58 16c-1-6-6-9-11-8 1 6 6 9 11 8z" fill="#6fb784"/>
+    <circle cx="58" cy="58" r="42" fill="#6db3df"/>
+    <path d="M24 44c6-10 18-15 26-10 6 4 2 12-6 13-7 1-8 8-14 9-5 1-8-6-6-12z" fill="#7cc48f"/>
+    <path d="M70 22c10 2 20 9 24 18-6 2-12-2-17 2-5 3-10 1-11-5-1-6-2-11 4-15z" fill="#7cc48f"/>
+    <path d="M74 80c6-4 14-3 18 1-3 7-10 13-18 14-5-3-6-11 0-15z" fill="#7cc48f"/><path d="M32 82c4 0 7 4 6 8-4-1-8-4-6-8z" fill="#7cc48f"/>
+    <circle cx="58" cy="58" r="42" fill="none" stroke="#3d7fae" stroke-width="2.5"/>
+    <path d="M30 34q8-12 22-14" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" opacity=".6"/>
+    ${brow}
+    <ellipse cx="44" cy="52" rx="4.6" ry="5.8" fill="#2b2f2c"/><ellipse cx="72" cy="52" rx="4.6" ry="5.8" fill="#2b2f2c"/>
+    <circle cx="45.6" cy="49.8" r="1.7" fill="#fff"/><circle cx="73.6" cy="49.8" r="1.7" fill="#fff"/>
+    <ellipse cx="35" cy="63" rx="6" ry="3.6" fill="#f29b9b" opacity=".75"/><ellipse cx="81" cy="63" rx="6" ry="3.6" fill="#f29b9b" opacity=".75"/>
+    ${mouth}</svg>`;
+}
+document.querySelectorAll('.gchar').forEach(g => (g.innerHTML = guideSVG(g.dataset.mood)));
+function setShare() {
+  const text = ja() ? '気候危機が止まらないのは「減らすと損をする」ルールのせい。減らすほど得をするように、ルールを書き換える提案。' : 'The climate crisis is stuck because the rules make reducing a losing move. A proposal to rewrite them so that cutting pays.';
+  $('shareX').href = 'https://x.com/intent/post?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(SITE_URL);
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.lang) setLang(b.dataset.lang);
+  else if (b.id === 'copyLink') {
+    navigator.clipboard?.writeText(SITE_URL).then(() => {
+      const s = b.innerHTML; b.textContent = ja() ? 'コピーしました' : 'Copied'; setTimeout(() => (b.innerHTML = s), 1600);
+    });
+  }
+});
+$('cp').addEventListener('input', renderDiv);
+
+setLang(lang);
+// ---- ちきゅうさんの解説 あり／なし（姉妹サイト共通の設定。同じドメインなので localStorage を共有。?guide=on|off でも指定できる）
+(function () {
+  const KEY = 'cwm-guide';
+  let g = null;
+  try { const q = new URLSearchParams(location.search).get('guide'); if (q === 'on' || q === 'off') { g = q; localStorage.setItem(KEY, q); } else g = localStorage.getItem(KEY); } catch (e) {}
+  // 選ぶ前は、日本語では「解説あり」、英語では「解説なし」。選んだあとは、どちらの言語でもその選択に従う
+  const L = () => { const h = document.documentElement; return h.classList.contains('en') ? 'en' : h.classList.contains('ja') ? 'ja' : (h.lang === 'ja' ? 'ja' : 'en'); };
+  const apply = () => {
+    const chosen = g === 'on' || g === 'off', eff = chosen ? g : (L() === 'ja' ? 'on' : 'off');
+    document.documentElement.classList.toggle('noguide', eff === 'off');
+    const box = document.getElementById('guidePick'); if (!box) return;
+    box.classList.toggle('first', !chosen && L() === 'ja');
+    box.querySelectorAll('[data-guide-set]').forEach(b => b.setAttribute('aria-pressed', (chosen || L() === 'en') && b.dataset.guideSet === eff));
+  };
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-guide-set]'); if (!b) return;
+    g = b.dataset.guideSet; try { localStorage.setItem(KEY, g); } catch (e) {}
+    apply();
+  });
+  window.cwmGuideApply = apply;
+  apply();
+})();
+</script>
+</body>
+</html>

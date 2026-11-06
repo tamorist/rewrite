@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# ローカル開発用
+.claude/
+
+# 下書き（非公開）
+x-posts.md
