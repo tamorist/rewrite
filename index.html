@@ -839,6 +839,8 @@ const GOATCOUNTER_CODE = 'rewrite';
 })();
 
 const SITE_URL = 'https://tamorist.github.io/rewrite/';
+// 共有・コピーするリンク：日本語表示中は ?lang=ja を付けて、開いた人にも日本語で表示する
+const shareUrl = () => SITE_URL + (lang === 'ja' ? '?lang=ja' : '');
 const STEERING = 'https://tamorist.github.io/steering/';   // 提案の本体（日本語版は /steering/ja/ 以下）
 const $ = id => document.getElementById(id);
 let lang = 'en';
@@ -912,13 +914,13 @@ function guideSVG(mood) {
 document.querySelectorAll('.gchar').forEach(g => (g.innerHTML = guideSVG(g.dataset.mood)));
 function setShare() {
   const text = ja() ? '気候危機が止まらないのは「減らすと損をする」ルールのせい。減らすほど得をするように、ルールを書き換える提案。' : 'The climate crisis is stuck because the rules make reducing a losing move. A proposal to rewrite them so that cutting pays.';
-  $('shareX').href = 'https://x.com/intent/post?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(SITE_URL);
+  $('shareX').href = 'https://x.com/intent/post?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(shareUrl());
 }
 document.addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
   if (b.dataset.lang) setLang(b.dataset.lang);
   else if (b.id === 'copyLink') {
-    navigator.clipboard?.writeText(SITE_URL).then(() => {
+    navigator.clipboard?.writeText(shareUrl()).then(() => {
       const s = b.innerHTML; b.textContent = ja() ? 'コピーしました' : 'Copied'; setTimeout(() => (b.innerHTML = s), 1600);
     });
   }
